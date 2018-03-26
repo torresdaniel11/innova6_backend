@@ -1,0 +1,1 @@
+web: gunicorn innova6.wsgi --log-file -

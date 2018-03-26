@@ -25,7 +25,7 @@ SECRET_KEY = '0dvcw)fqgc8g-rd5v_d9@9pp^f1))+$q3r*fl-4rq7be(bhi)$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['innova6.herokuapp.com/']
 
 
 # Application definition
