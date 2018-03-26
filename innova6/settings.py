@@ -80,9 +80,11 @@ WSGI_APPLICATION = 'innova6.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'innova6',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
+        'NAME': 'd3oim0fae30cur',
+        'USER': 'swkkrtgxntowjb',
+        'PASSWORD': '8d54a4f7f18a2e752609c75a8c947fafb7e667ff44bfd4f383a06ac9b6984f42',
+        'HOST': 'ec2-107-20-151-189.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
