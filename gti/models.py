@@ -25,6 +25,7 @@ class Articles(models.Model):
             self.article_slug = slugify(self.article_tittle)
         super(Articles, self).save(*args, **kwargs)
 
+
 # Conversation levels model
 class ConversationLevels(models.Model):
     conversation_level_name = models.CharField(max_length=200)
@@ -36,13 +37,14 @@ class ConversationLevels(models.Model):
     def save(self, *args, **kwargs):
         super(ConversationLevels, self).save(*args, **kwargs)
 
+
 # Conversation model
 class Conversations(models.Model):
     conversation_token = models.CharField(max_length=200, editable=False)
-    conversation_name = models.CharField(max_length=200)
-    conversation_email = models.CharField(max_length=200)
-    conversation_platform = models.CharField(max_length=200)
-    conversation_faculty = models.CharField(max_length=200)
+    conversation_name = models.CharField(max_length=200, blank=True)
+    conversation_email = models.CharField(max_length=200, blank=True)
+    conversation_platform = models.CharField(max_length=200, blank=True)
+    conversation_faculty = models.CharField(max_length=200, blank=True)
     conversation_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     conversation_update_date = models.DateTimeField(auto_now=True, blank=True, null=True)
     conversation_conversation_level = models.ForeignKey(ConversationLevels, null=True, blank=True,
