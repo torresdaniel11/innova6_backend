@@ -47,7 +47,7 @@ class QuestionsSerializers(serializers.HyperlinkedModelSerializer):
         model = Questions
         fields = (
             'id', 'question_name', 'question_description', 'question_keywords', 'question_conversation_level',
-            'question_category')
+            'question_category', 'question_update', 'question_field_update')
 
 
 class QuestionArticlesSerializers(serializers.HyperlinkedModelSerializer):

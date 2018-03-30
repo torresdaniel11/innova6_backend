@@ -35,7 +35,8 @@ admin.site.register(Conversations, ConversationsAdmin)
 
 class QuestionsAdmin(admin.ModelAdmin):
     list_display = (
-        'question_name', 'question_description', 'question_keywords', 'question_conversation_level')
+        'question_name', 'question_description', 'question_keywords', 'question_conversation_level', 'question_update',
+        'question_field_update')
 
 
 admin.site.register(Questions, QuestionsAdmin)
