@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Articles
 from .models import ConversationLevels
 from .models import Conversations
+from .models import Questions
 
 
 # Register your models here.
@@ -27,3 +28,11 @@ class ConversationsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Conversations, ConversationsAdmin)
+
+
+class QuestionsAdmin(admin.ModelAdmin):
+    list_display = (
+        'question_name', 'question_description', 'question_keywords', 'question_conversation_level')
+
+
+admin.site.register(Questions, QuestionsAdmin)

@@ -1,4 +1,4 @@
-from os import link
+from random import randint
 
 from rest_framework import viewsets, permissions
 from rest_framework.response import Response
@@ -6,6 +6,7 @@ from rest_framework.decorators import detail_route
 
 from serializers import ArticlesSerializers
 from serializers import ConversationsSerializers
+from serializers import QuestionsSerializers
 from gti import models
 
 
@@ -21,3 +22,17 @@ class ConversationView(viewsets.ModelViewSet):
     serializer_class = ConversationsSerializers
     lookup_field = 'conversation_token'
 
+    @detail_route()
+    def suggested_questions(self, request, *args, **kwargs):
+        conversation = self.get_object()
+        questions = models.Questions.objects.filter(
+            question_conversation_level=conversation.conversation_conversation_level)
+        serializer = QuestionsSerializers(questions, many=True)
+        i = randint(0, questions.count() - 1)
+        return Response(serializer.data[i])
+
+
+# Create your views here.i]
+class QuestionView(viewsets.ModelViewSet):
+    queryset = models.Questions.objects.all()
+    serializer_class = QuestionsSerializers
