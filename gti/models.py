@@ -7,9 +7,6 @@ from django.db import models
 from django.template.defaultfilters import slugify
 
 
-# Create your models here.
-
-# Modelo para la creacion de articulos.
 class Articles(models.Model):
     article_tittle = models.CharField(max_length=200)
     article_content = models.TextField()
@@ -26,7 +23,6 @@ class Articles(models.Model):
         super(Articles, self).save(*args, **kwargs)
 
 
-# Conversation levels model
 class ConversationLevels(models.Model):
     conversation_level_name = models.CharField(max_length=200)
     conversation_color = models.CharField(max_length=200)
@@ -42,7 +38,6 @@ def get_conversation_levels_default():
     return ConversationLevels.objects.get(id=1)
 
 
-# Conversation model
 class Conversations(models.Model):
     conversation_token = models.CharField(max_length=200, editable=False)
     conversation_name = models.CharField(max_length=200, blank=True)
@@ -66,16 +61,24 @@ class Conversations(models.Model):
             self.conversation_token = self.generate_key()
         super(Conversations, self).save(*args, **kwargs)
 
-    def get_foo(self, obj):
-        return "Foo id: %i" % obj.pk
+
+class Category(models.Model):
+    category_name = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return self.category_name
+
+    def save(self, *args, **kwargs):
+        super(Category, self).save(*args, **kwargs)
 
 
 class Questions(models.Model):
     question_name = models.CharField(max_length=200)
     question_description = models.TextField()
     question_keywords = models.TextField()
-    question_conversation_level = models.ForeignKey(ConversationLevels,
+    question_conversation_level = models.ForeignKey(ConversationLevels, null=True, blank=True,
                                                     on_delete=models.DO_NOTHING)
+    question_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.DO_NOTHING)
 
     def __unicode__(self):
         return self.question_name
@@ -92,6 +95,8 @@ class QuestionArticles(models.Model):
                                                   on_delete=models.DO_NOTHING)
     question_article_article = models.ForeignKey(Articles, null=True, blank=True,
                                                  on_delete=models.DO_NOTHING)
+    question_article_category = models.ForeignKey(Category, null=True, blank=True,
+                                                  on_delete=models.DO_NOTHING)
 
     def __unicode__(self):
         return self.question_article_name
@@ -101,17 +106,13 @@ class QuestionArticles(models.Model):
 
 
 class QuestionRecords(models.Model):
-    question_record_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
-    question_response = models.TextField()
+    question_record_response = models.TextField()
     question_record_conversation = models.ForeignKey(Conversations, null=True, blank=True,
                                                      on_delete=models.CASCADE)
-    question_record_conversation = models.ForeignKey(Questions, null=True, blank=True,
-                                                     on_delete=models.DO_NOTHING)
-    question_record_conversation = models.ForeignKey(Questions, null=False, blank=False,
-                                                     on_delete=models.DO_NOTHING)
-
-    def __unicode__(self):
-        return self.question_record_create_date
+    question_record_question = models.ForeignKey(Questions, null=True, blank=True,
+                                                 on_delete=models.DO_NOTHING)
+    question_record_token = models.CharField(max_length=200, editable=False, blank=True, null=True)
+    question_record_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
 
     def save(self, *args, **kwargs):
         super(QuestionRecords, self).save(*args, **kwargs)

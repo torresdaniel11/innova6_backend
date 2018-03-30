@@ -3,6 +3,8 @@ from .models import Articles
 from .models import ConversationLevels
 from .models import Conversations
 from .models import Questions
+from .models import QuestionArticles
+from .models import QuestionRecords
 
 
 # Register your models here.
@@ -36,3 +38,21 @@ class QuestionsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Questions, QuestionsAdmin)
+
+
+class QuestionArticlesAdmin(admin.ModelAdmin):
+    list_display = (
+        'question_article_name', 'question_article_description', 'question_article_keywords',
+        'question_article_question', 'question_article_article', 'question_article_category')
+
+
+admin.site.register(QuestionArticles, QuestionArticlesAdmin)
+
+
+class QuestionRecordsAdmin(admin.ModelAdmin):
+    list_display = (
+        'question_record_response', 'question_record_conversation', 'question_record_question', 'question_record_token',
+        'question_record_create_date')
+
+
+admin.site.register(QuestionRecords, QuestionRecordsAdmin)
