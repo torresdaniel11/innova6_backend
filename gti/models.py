@@ -108,10 +108,5 @@ class QuestionRecords(models.Model):
     question_record_token = models.CharField(max_length=200, editable=False, blank=True, null=True)
     question_record_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
 
-    def generate_key(self):
-        return binascii.hexlify(os.urandom(30)).decode()
-
     def save(self, *args, **kwargs):
-        if not self.id:
-            self.question_record_token = self.generate_key()
         super(QuestionRecords, self).save(*args, **kwargs)

@@ -68,5 +68,5 @@ class QuestionRecordsSerializers(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = QuestionRecords
         fields = (
-            'id', 'question_record_create_date', 'question_record_response', 'question_record_conversation',
-            'question_record_question')
+            'id', 'question_record_response', 'question_record_conversation', 'question_record_question',
+            'question_record_token', 'question_record_create_date')
