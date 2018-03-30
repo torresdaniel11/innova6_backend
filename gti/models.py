@@ -34,8 +34,14 @@ class ConversationLevels(models.Model):
         super(ConversationLevels, self).save(*args, **kwargs)
 
 
-def get_conversation_levels_default():
-    return ConversationLevels.objects.get(id=1)
+class Category(models.Model):
+    category_name = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return self.category_name
+
+    def save(self, *args, **kwargs):
+        super(Category, self).save(*args, **kwargs)
 
 
 class Conversations(models.Model):
@@ -47,8 +53,7 @@ class Conversations(models.Model):
     conversation_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     conversation_update_date = models.DateTimeField(auto_now=True, blank=True, null=True)
     conversation_conversation_level = models.ForeignKey(ConversationLevels, editable=False, null=True, blank=True,
-                                                        on_delete=models.DO_NOTHING,
-                                                        default=get_conversation_levels_default)
+                                                        on_delete=models.DO_NOTHING)
 
     def __unicode__(self):
         return self.conversation_token
@@ -62,23 +67,12 @@ class Conversations(models.Model):
         super(Conversations, self).save(*args, **kwargs)
 
 
-class Category(models.Model):
-    category_name = models.CharField(max_length=200)
-
-    def __unicode__(self):
-        return self.category_name
-
-    def save(self, *args, **kwargs):
-        super(Category, self).save(*args, **kwargs)
-
-
 class Questions(models.Model):
     question_name = models.CharField(max_length=200)
     question_description = models.TextField()
     question_keywords = models.TextField()
     question_conversation_level = models.ForeignKey(ConversationLevels, null=True, blank=True,
                                                     on_delete=models.DO_NOTHING)
-    question_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.DO_NOTHING)
 
     def __unicode__(self):
         return self.question_name
@@ -93,10 +87,6 @@ class QuestionArticles(models.Model):
     question_article_keywords = models.TextField()
     question_article_question = models.ForeignKey(Questions, null=True, blank=True,
                                                   on_delete=models.DO_NOTHING)
-    question_article_article = models.ForeignKey(Articles, null=True, blank=True,
-                                                 on_delete=models.DO_NOTHING)
-    question_article_category = models.ForeignKey(Category, null=True, blank=True,
-                                                  on_delete=models.DO_NOTHING)
 
     def __unicode__(self):
         return self.question_article_name
@@ -107,12 +97,17 @@ class QuestionArticles(models.Model):
 
 class QuestionRecords(models.Model):
     question_record_response = models.TextField()
-    question_record_conversation = models.ForeignKey(Conversations, null=True, blank=True,
+    question_record_conversation = models.ForeignKey(Conversations,
                                                      on_delete=models.CASCADE)
-    question_record_question = models.ForeignKey(Questions, null=True, blank=True,
+    question_record_question = models.ForeignKey(Questions,
                                                  on_delete=models.DO_NOTHING)
     question_record_token = models.CharField(max_length=200, editable=False, blank=True, null=True)
     question_record_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
 
+    def generate_key(self):
+        return binascii.hexlify(os.urandom(30)).decode()
+
     def save(self, *args, **kwargs):
+        if not self.id:
+            self.question_record_token = self.generate_key()
         super(QuestionRecords, self).save(*args, **kwargs)

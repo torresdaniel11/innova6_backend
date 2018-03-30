@@ -43,7 +43,7 @@ admin.site.register(Questions, QuestionsAdmin)
 class QuestionArticlesAdmin(admin.ModelAdmin):
     list_display = (
         'question_article_name', 'question_article_description', 'question_article_keywords',
-        'question_article_question', 'question_article_article', 'question_article_category')
+        'question_article_question')
 
 
 admin.site.register(QuestionArticles, QuestionArticlesAdmin)
