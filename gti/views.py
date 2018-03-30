@@ -43,11 +43,15 @@ class ConversationView(viewsets.ModelViewSet):
         if serializer.is_valid():
             question = serializer.data['question_record_question']
 
-            conversation_conversation_level = models.ConversationLevels.objects.get(
-                id=conversation.conversation_conversation_level.id)
+            conversation_conversation_level = list(models.ConversationLevels.objects.filter(
+                id=conversation.conversation_conversation_level.id + 1))
+
+            if conversation_conversation_level:
+                conversation.conversation_conversation_level = conversation_conversation_level[0]
 
             conversation.conversation_name = serializer.data['question_record_response']
             conversation.save()
+
             return Response({'status': 'password set'})
         else:
             return Response(serializer.errors,
