@@ -19,5 +19,5 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^conversations/(?P<conversation_token>[^/.]+)/questions/$', suggested_questions, name='suggested-questions'),
     url(r'^question_records/(?P<conversation_token>[^/.]+)/questions/$', suggested_questions,
-        name='save-response-suggested_questions_post'),
+        name='save-response-suggested_questions_post')
 ]

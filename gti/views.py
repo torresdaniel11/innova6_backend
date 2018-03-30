@@ -116,3 +116,4 @@ class CategoryView(viewsets.ModelViewSet):
 class QuestionRecordsView(viewsets.ModelViewSet):
     queryset = models.QuestionRecords.objects.all()
     serializer_class = QuestionRecordsSerializers
+    lookup_field = 'question_record_token'
