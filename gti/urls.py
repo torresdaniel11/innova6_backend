@@ -10,6 +10,7 @@ router = routers.DefaultRouter()
 router.register(r'articles', views.ArticleView)
 router.register(r'conversations', views.ConversationView)
 router.register(r'questions', views.QuestionView)
+router.register(r'categories', views.CategoryView)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

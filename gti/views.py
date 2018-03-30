@@ -8,6 +8,7 @@ from serializers import ArticlesSerializers
 from serializers import ConversationsSerializers
 from serializers import QuestionsSerializers
 from serializers import QuestionArticlesSerializers
+from serializers import CategorySerializers
 from gti import models
 
 
@@ -52,3 +53,8 @@ class QuestionView(viewsets.ModelViewSet):
 class QuestionArticlesView(viewsets.ModelViewSet):
     queryset = models.QuestionArticles.objects.all()
     serializer_class = QuestionArticlesSerializers
+
+
+class CategoryView(viewsets.ModelViewSet):
+    queryset = models.Category.objects.all()
+    serializer_class = CategorySerializers

@@ -4,6 +4,7 @@ from .models import Conversations
 from .models import Questions
 from .models import QuestionArticles
 from .models import QuestionRecords
+from .models import Category
 
 
 class ArticlesSerializers(serializers.ModelSerializer):
@@ -40,3 +41,9 @@ class QuestionRecordsSerializers(serializers.HyperlinkedModelSerializer):
         model = QuestionRecords
         fields = (
             'id', 'question_record_create_date', 'question_record_response')
+
+
+class CategorySerializers(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Category
+        fields = ('id', 'category_name')

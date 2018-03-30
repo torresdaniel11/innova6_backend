@@ -5,6 +5,7 @@ from .models import Conversations
 from .models import Questions
 from .models import QuestionArticles
 from .models import QuestionRecords
+from .models import Category
 
 
 # Register your models here.
@@ -56,3 +57,11 @@ class QuestionRecordsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(QuestionRecords, QuestionRecordsAdmin)
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'id', 'category_name')
+
+
+admin.site.register(Category, CategoryAdmin)
