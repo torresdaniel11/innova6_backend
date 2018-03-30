@@ -73,6 +73,7 @@ class Questions(models.Model):
     question_keywords = models.TextField()
     question_conversation_level = models.ForeignKey(ConversationLevels, null=True, blank=True,
                                                     on_delete=models.DO_NOTHING)
+    question_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.DO_NOTHING)
 
     def __unicode__(self):
         return self.question_name
@@ -87,6 +88,7 @@ class QuestionArticles(models.Model):
     question_article_keywords = models.TextField()
     question_article_question = models.ForeignKey(Questions, null=True, blank=True,
                                                   on_delete=models.DO_NOTHING)
+    question_article_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.DO_NOTHING)
 
     def __unicode__(self):
         return self.question_article_name
