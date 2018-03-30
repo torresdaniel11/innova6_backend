@@ -74,6 +74,8 @@ class Questions(models.Model):
     question_conversation_level = models.ForeignKey(ConversationLevels, null=True, blank=True,
                                                     on_delete=models.DO_NOTHING)
     question_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.DO_NOTHING)
+    question_update = models.BooleanField(default=False)
+    question_field_update = models.TextField(null=True, blank=True)
 
     def __unicode__(self):
         return self.question_name
