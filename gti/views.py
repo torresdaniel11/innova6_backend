@@ -19,13 +19,11 @@ from rest_framework.parsers import JSONParser
 from gti import models
 
 
-# Create your views here.
 class ArticleView(viewsets.ModelViewSet):
     queryset = models.Articles.objects.all()
     serializer_class = ArticlesSerializers
 
 
-# Create your views here.
 class ConversationView(viewsets.ModelViewSet):
     queryset = models.Conversations.objects.all()
     serializer_class = ConversationsSerializers
@@ -99,6 +97,14 @@ class ConversationView(viewsets.ModelViewSet):
             return Response(serializer.errors,
                             status=status.HTTP_400_BAD_REQUEST)
 
+    @detail_route(methods=['get'])
+    def retrieve_response_suggested_questions_post(self, request, *args, **kwargs):
+        conversation = self.get_object()
+        questions = models.QuestionRecords.objects.filter(
+            question_record_token=conversation.conversation_token)
+        serializer = QuestionRecordsSerializers(questions, many=True)
+        return Response(serializer.data)
+
 
 class QuestionView(viewsets.ModelViewSet):
     queryset = models.Questions.objects.all()
@@ -123,4 +129,3 @@ class CategoryView(viewsets.ModelViewSet):
 class QuestionRecordsView(viewsets.ModelViewSet):
     queryset = models.QuestionRecords.objects.all()
     serializer_class = QuestionRecordsSerializers
-    lookup_field = 'question_record_token'
