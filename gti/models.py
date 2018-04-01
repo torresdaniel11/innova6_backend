@@ -33,6 +33,8 @@ class ConversationLevels(models.Model):
     def save(self, *args, **kwargs):
         super(ConversationLevels, self).save(*args, **kwargs)
 
+def get_conversation_levels_default():
+    return ConversationLevels.objects.get(id=1)
 
 class Category(models.Model):
     category_name = models.CharField(max_length=200)
@@ -53,7 +55,7 @@ class Conversations(models.Model):
     conversation_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     conversation_update_date = models.DateTimeField(auto_now=True, blank=True, null=True)
     conversation_conversation_level = models.ForeignKey(ConversationLevels, editable=False, null=True, blank=True,
-                                                        on_delete=models.DO_NOTHING)
+                                                        on_delete=models.DO_NOTHING, default=get_conversation_levels_default)
 
     def __unicode__(self):
         return self.conversation_token
