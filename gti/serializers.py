@@ -23,14 +23,12 @@ class ConversationLevelsSerializer(serializers.ModelSerializer):
 
 
 class ConversationsSerializers(serializers.HyperlinkedModelSerializer):
-    conversation_conversation_level = ConversationLevelsSerializer(many=False)
 
     class Meta:
         model = Conversations
         fields = (
             'id', 'conversation_token', 'conversation_name', 'conversation_email', 'conversation_platform',
-            'conversation_faculty', 'conversation_create_date', 'conversation_update_date',
-            'conversation_conversation_level')
+            'conversation_faculty', 'conversation_create_date', 'conversation_update_date')
 
 
 class CategorySerializers(serializers.HyperlinkedModelSerializer):
