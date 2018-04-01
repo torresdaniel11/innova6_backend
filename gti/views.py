@@ -1,5 +1,4 @@
-from random import randint
-
+import random
 from rest_framework import status
 from rest_framework import viewsets, permissions
 from rest_framework.response import Response
@@ -40,7 +39,8 @@ class ConversationView(viewsets.ModelViewSet):
 
         if questions.count():
             serializer = QuestionsSerializers(questions, many=True)
-            i = randint(0, - 1)
+            max = questions.count() - 1
+            i = random.randint(0, max)
             return Response(serializer.data[i])
         else:
             return Response(status=status.HTTP_200_OK)
@@ -89,7 +89,8 @@ class ConversationView(viewsets.ModelViewSet):
                 question_conversation_level=conversation.conversation_conversation_level)
             if questions.count():
                 serializer = QuestionsSerializers(questions, many=True)
-                i = randint(0, - 1)
+                max = questions.count() - 1
+                i = random.uniform(0, max)
                 return Response(serializer.data[i])
             else:
                 return Response(status=status.HTTP_200_OK)
