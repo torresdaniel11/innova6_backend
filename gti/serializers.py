@@ -40,8 +40,8 @@ class CategorySerializers(serializers.HyperlinkedModelSerializer):
 
 
 class QuestionsSerializers(serializers.HyperlinkedModelSerializer):
-    question_conversation_level = ConversationLevelsSerializer(many=False)
-    question_category = CategorySerializers(many=False)
+    question_conversation_level = ConversationLevelsSerializer(many=False, read_only=True)
+    question_category = CategorySerializers(many=False, read_only=True)
 
     class Meta:
         model = Questions
