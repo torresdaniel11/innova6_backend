@@ -11,6 +11,7 @@ from serializers import QuestionsSerializers
 from serializers import QuestionArticlesSerializers
 from serializers import CategorySerializers
 from serializers import QuestionRecordsSerializers
+from serializers import ConversationLevelsSerializer
 
 from .models import QuestionRecords
 
@@ -106,6 +107,11 @@ class QuestionView(viewsets.ModelViewSet):
 class QuestionArticlesView(viewsets.ModelViewSet):
     queryset = models.QuestionArticles.objects.all()
     serializer_class = QuestionArticlesSerializers
+
+
+class ConversationLevelsView(viewsets.ModelViewSet):
+    queryset = models.ConversationLevels.objects.all()
+    serializer_class = ConversationLevelsSerializer
 
 
 class CategoryView(viewsets.ModelViewSet):
