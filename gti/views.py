@@ -36,7 +36,7 @@ class ConversationView(viewsets.ModelViewSet):
             question_conversation_level=conversation.conversation_conversation_level)
 
         if questions.count():
-            serializer = QuestionsSerializers(questions, many=False)
+            serializer = QuestionsSerializers(questions, many=True)
             max = questions.count() - 1
             i = random.randint(0, max)
             return Response(serializer.data[i])
@@ -83,7 +83,6 @@ class ConversationView(viewsets.ModelViewSet):
         else:
             return Response(serializer.errors,
                             status=status.HTTP_400_BAD_REQUEST)
-
 
     @detail_route(methods=['get'])
     def retrieve_response_suggested_questions_post(self, request, *args, **kwargs):
