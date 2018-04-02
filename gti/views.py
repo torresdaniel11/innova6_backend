@@ -50,6 +50,9 @@ class ConversationView(viewsets.ModelViewSet):
         data = JSONParser().parse(request)
         serializer = QuestionRecordsSerializers(data=data)
 
+        conversation_conversation_level = list(models.ConversationLevels.objects.filter(
+            id=conversation.conversation_conversation_level.id + 1))
+
         if serializer.is_valid():
             question = models.Questions.objects.get(
                 id=serializer.initial_data.get('question_record_question', None).get('id'))
@@ -77,8 +80,10 @@ class ConversationView(viewsets.ModelViewSet):
                                  question_record_question=question,
                                  question_record_token=conversation.conversation_token)
             qr.save()
-            serializer = ConversationsSerializers(conversation)
-            return Response(serializer.data)
+
+            conversationResponse = models.Conversations.objects.get(
+                conversation_token=conversation.conversation_token)
+            return Response(ConversationsSerializers(conversationResponse).data)
 
         else:
             return Response(serializer.errors,
