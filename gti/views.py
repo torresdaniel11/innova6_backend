@@ -82,28 +82,20 @@ class ConversationView(viewsets.ModelViewSet):
                                  question_record_question=question,
                                  question_record_token=conversation.conversation_token)
             qr.save()
-
-            questions = models.Questions.objects.filter(
-                question_conversation_level=conversation.conversation_conversation_level)
-            if questions.count():
-                serializer = QuestionsSerializers(questions, many=True)
-                max = questions.count() - 1
-                i = random.uniform(0, max)
-                return Response(serializer.data[i])
-            else:
-                return Response(status=status.HTTP_200_OK)
+            return Response(status=status.HTTP_200_OK)
 
         else:
             return Response(serializer.errors,
                             status=status.HTTP_400_BAD_REQUEST)
 
-    @detail_route(methods=['get'])
-    def retrieve_response_suggested_questions_post(self, request, *args, **kwargs):
-        conversation = self.get_object()
-        questions = models.QuestionRecords.objects.filter(
-            question_record_token=conversation.conversation_token)
-        serializer = QuestionRecordsSerializers(questions, many=True)
-        return Response(serializer.data)
+
+@detail_route(methods=['get'])
+def retrieve_response_suggested_questions_post(self, request, *args, **kwargs):
+    conversation = self.get_object()
+    questions = models.QuestionRecords.objects.filter(
+        question_record_token=conversation.conversation_token)
+    serializer = QuestionRecordsSerializers(questions, many=True)
+    return Response(serializer.data)
 
 
 class QuestionView(viewsets.ModelViewSet):
