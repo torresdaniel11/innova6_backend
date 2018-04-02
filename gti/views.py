@@ -69,7 +69,8 @@ class ConversationView(viewsets.ModelViewSet):
                     conversation.conversation_platform = serializer.data['question_record_response']
                 elif question.conversation_platform == 'conversation_faculty':
                     conversation.conversation_faculty = serializer.data['question_record_response']
-                conversation.save()
+
+            conversation.save()
 
             qr = QuestionRecords(question_record_response=serializer.data['question_record_response'],
                                  question_record_conversation=conversation,
