@@ -60,12 +60,6 @@ class ConversationView(viewsets.ModelViewSet):
             if conversation_conversation_level:
                 conversation.conversation_conversation_level = conversation_conversation_level[0]
 
-            conversation_conversation_level = list(models.ConversationLevels.objects.filter(
-                id=conversation.conversation_conversation_level.id + 1))
-
-            if conversation_conversation_level:
-                conversation.conversation_conversation_level = conversation_conversation_level[0]
-
             if question.question_update:
                 if question.question_field_update == 'conversation_name':
                     conversation.conversation_name = serializer.data['question_record_response']
