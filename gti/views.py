@@ -50,15 +50,12 @@ class ConversationView(viewsets.ModelViewSet):
         data = JSONParser().parse(request)
         serializer = QuestionRecordsSerializers(data=data)
 
+        conversation_conversation_level = list(models.ConversationLevels.objects.filter(
+            id=conversation.conversation_conversation_level.id + 1))
+
         if serializer.is_valid():
             question = models.Questions.objects.get(
                 id=serializer.initial_data.get('question_record_question', None).get('id'))
-
-            conversation_conversation_level = list(models.ConversationLevels.objects.filter(
-                id=conversation.conversation_conversation_level.id + 1))
-
-            if conversation_conversation_level:
-                conversation.conversation_conversation_level = conversation_conversation_level[0]
 
             conversation_conversation_level = list(models.ConversationLevels.objects.filter(
                 id=conversation.conversation_conversation_level.id + 1))
@@ -75,7 +72,8 @@ class ConversationView(viewsets.ModelViewSet):
                     conversation.conversation_platform = serializer.data['question_record_response']
                 elif question.conversation_platform == 'conversation_faculty':
                     conversation.conversation_faculty = serializer.data['question_record_response']
-                conversation.save()
+
+            conversation.save()
 
             qr = QuestionRecords(question_record_response=serializer.data['question_record_response'],
                                  question_record_conversation=conversation,
@@ -83,15 +81,9 @@ class ConversationView(viewsets.ModelViewSet):
                                  question_record_token=conversation.conversation_token)
             qr.save()
 
-            questions = models.Questions.objects.filter(
-                question_conversation_level=conversation.conversation_conversation_level)
-            if questions.count():
-                serializer = QuestionsSerializers(questions, many=True)
-                max = questions.count() - 1
-                i = random.uniform(0, max)
-                return Response(serializer.data[i])
-            else:
-                return Response(status=status.HTTP_200_OK)
+            conversationResponse = models.Conversations.objects.get(
+                conversation_token=conversation.conversation_token)
+            return Response(ConversationsSerializers(conversationResponse).data)
 
         else:
             return Response(serializer.errors,
