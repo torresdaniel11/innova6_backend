@@ -70,6 +70,16 @@ class Conversations(models.Model):
         super(Conversations, self).save(*args, **kwargs)
 
 
+class EvaluateConversation(models.Model):
+    evaluate_conversation_score = models.CharField(max_length=200)
+    evaluate_conversation_observation = models.TextField()
+    evaluate_conversation_conversation = models.ForeignKey(Conversations, null=True, blank=True,
+                                                           on_delete=models.DO_NOTHING)
+
+    def save(self, *args, **kwargs):
+        super(EvaluateConversation, self).save(*args, **kwargs)
+
+
 class Questions(models.Model):
     question_name = models.CharField(max_length=200)
     question_description = models.TextField()

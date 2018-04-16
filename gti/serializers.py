@@ -6,6 +6,7 @@ from .models import ConversationLevels
 from .models import Conversations
 from .models import QuestionArticles
 from .models import QuestionRecords
+from .models import EvaluateConversation
 from .models import Questions
 
 
@@ -70,3 +71,13 @@ class QuestionRecordsSerializers(serializers.HyperlinkedModelSerializer):
         fields = (
             'id', 'question_record_response', 'question_record_conversation', 'question_record_question',
             'question_record_token', 'question_record_create_date')
+
+
+class EvaluateConversationSerializers(serializers.HyperlinkedModelSerializer):
+    question_record_conversation = ConversationsSerializers(many=False)
+
+    class Meta:
+        model = EvaluateConversation
+        fields = (
+            'id', 'evaluate_conversation_score', 'evaluate_conversation_observation',
+            'evaluate_conversation_conversation')
