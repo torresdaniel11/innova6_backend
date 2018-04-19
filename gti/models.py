@@ -7,22 +7,6 @@ from django.db import models
 from django.template.defaultfilters import slugify
 
 
-class Articles(models.Model):
-    article_tittle = models.CharField(max_length=200)
-    article_content = models.TextField()
-    article_slug = models.SlugField(editable=False)
-    article_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
-    article_update_date = models.DateTimeField(auto_now=True, blank=True, null=True)
-
-    def __unicode__(self):
-        return self.article_tittle
-
-    def save(self, *args, **kwargs):
-        if not self.id:
-            self.article_slug = slugify(self.article_tittle)
-        super(Articles, self).save(*args, **kwargs)
-
-
 class ConversationLevels(models.Model):
     conversation_level_name = models.CharField(max_length=200)
     conversation_color = models.CharField(max_length=200)
@@ -33,8 +17,10 @@ class ConversationLevels(models.Model):
     def save(self, *args, **kwargs):
         super(ConversationLevels, self).save(*args, **kwargs)
 
+
 def get_conversation_levels_default():
     return ConversationLevels.objects.get(id=1)
+
 
 class Category(models.Model):
     category_name = models.CharField(max_length=200)
@@ -114,3 +100,20 @@ class QuestionRecords(models.Model):
 
     def save(self, *args, **kwargs):
         super(QuestionRecords, self).save(*args, **kwargs)
+
+
+class Articles(models.Model):
+    article_tittle = models.CharField(max_length=200)
+    article_content = models.TextField()
+    article_slug = models.SlugField(editable=False)
+    article_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    article_update_date = models.DateTimeField(auto_now=True, blank=True, null=True)
+    question_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.DO_NOTHING)
+
+    def __unicode__(self):
+        return self.article_tittle
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.article_slug = slugify(self.article_tittle)
+        super(Articles, self).save(*args, **kwargs)
