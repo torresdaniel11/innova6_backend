@@ -27,3 +27,4 @@ Para este desarrollo hemos hecho uso de las siguientes tecnologias:
 * Heroku
 * JIRA
 * Confluence
+* Firebase
