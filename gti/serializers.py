@@ -14,7 +14,7 @@ class ArticlesSerializers(serializers.ModelSerializer):
     class Meta:
         model = Articles
         fields = (
-            'id', 'article_tittle', 'article_content', 'article_slug', 'article_create_date', 'article_update_date')
+            'id', 'article_tittle', 'article_content', 'article_slug', 'article_create_date', 'article_update_date', 'question_category')
 
 
 class ConversationLevelsSerializer(serializers.ModelSerializer):

@@ -10,7 +10,7 @@ from .models import Category
 
 # Register your models here.
 class ArticlesAdmin(admin.ModelAdmin):
-    list_display = ('article_tittle', 'article_create_date', 'article_update_date')
+    list_display = ('article_tittle', 'article_create_date', 'article_update_date', 'question_category')
 
 
 admin.site.register(Articles, ArticlesAdmin)
