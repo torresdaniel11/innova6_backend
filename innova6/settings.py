@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -82,11 +83,17 @@ DATABASES = {
         'USER': 'swkkrtgxntowjb',
         'PASSWORD': '8d54a4f7f18a2e752609c75a8c947fafb7e667ff44bfd4f383a06ac9b6984f42',
         'HOST': 'ec2-107-20-151-189.compute-1.amazonaws.com',
-        'PORT': '5432', 'TEST': {
+        'PORT': '5432',
+        'TEST': {
             'NAME': 'auto_tests',
         }
     }
 }
+
+if 'test' in sys.argv:
+    DATABASES = {
+        'default': {'ENGINE': 'django.db.backends.sqlite3'}
+    }
 
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
