@@ -73,6 +73,8 @@ class Questions(models.Model):
     question_replace = models.BooleanField(default=False)
     question_load_question = models.BooleanField(default=False)
     question_load_article = models.BooleanField(default=False)
+    question_evaluate_one = models.BooleanField(default=False)
+    question_evaluate_two = models.BooleanField(default=False)
     question_field_update = models.TextField(null=True, blank=True)
 
     def __unicode__(self):
