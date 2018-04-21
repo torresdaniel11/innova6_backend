@@ -14,7 +14,8 @@ class ArticlesSerializers(serializers.ModelSerializer):
     class Meta:
         model = Articles
         fields = (
-            'id', 'article_tittle', 'article_content', 'article_slug', 'article_create_date', 'article_update_date', 'question_category')
+            'id', 'article_tittle', 'article_content', 'article_slug', 'article_create_date', 'article_update_date',
+            'question_category')
 
 
 class ConversationLevelsSerializer(serializers.ModelSerializer):
@@ -48,7 +49,8 @@ class QuestionsSerializers(serializers.HyperlinkedModelSerializer):
         model = Questions
         fields = (
             'id', 'question_name', 'question_description', 'question_keywords', 'question_conversation_level',
-            'question_category', 'question_replace', 'question_update', 'question_field_update')
+            'question_category', 'question_replace', 'question_update', 'question_field_update',
+            'question_load_question', 'question_load_article')
 
 
 class QuestionArticlesSerializers(serializers.HyperlinkedModelSerializer):

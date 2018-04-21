@@ -1,6 +1,6 @@
 import random
 from rest_framework import status
-from rest_framework import viewsets, permissions
+from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.decorators import detail_route
 
@@ -82,9 +82,9 @@ class ConversationView(viewsets.ModelViewSet):
                                  question_record_token=conversation.conversation_token)
             qr.save()
 
-            conversationResponse = models.Conversations.objects.get(
+            conversationr_response = models.Conversations.objects.get(
                 conversation_token=conversation.conversation_token)
-            return Response(ConversationsSerializers(conversationResponse).data)
+            return Response(ConversationsSerializers(conversationr_response).data)
 
         else:
             return Response(serializer.errors,
