@@ -33,8 +33,8 @@ Para este desarrollo hemos hecho uso de las siguientes tecnologias:
 ### Integracion Continua:
 Para este desarrollo hemos hecho uso de la siguiente tecnologia para el manejo de la integracion continua:
 
-* Travis
-
+* Codeship
+[ ![Codeship Status for torresdaniel11/innova6_backend](https://app.codeship.com/projects/1c647590-27a4-0136-f837-6ef2b9ae3ded/status?branch=master)](https://app.codeship.com/projects/287068)
 
 ### Analisis de Codigo Estatico:
 Para este desarrollo hemos hecho uso de la siguiente tecnologia para el analisis de codigo estatico:
