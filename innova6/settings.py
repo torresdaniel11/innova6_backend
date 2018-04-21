@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_nose',
     'rest_framework',
     'gunicorn',
     'gti',
@@ -86,6 +87,8 @@ DATABASES = {
         }
     }
 }
+
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
