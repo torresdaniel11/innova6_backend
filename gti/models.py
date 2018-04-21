@@ -39,6 +39,7 @@ class Conversations(models.Model):
     conversation_conversation_level = models.ForeignKey(ConversationLevels, editable=False, null=True, blank=True,
                                                         on_delete=models.DO_NOTHING)
 
+
     def __unicode__(self):
         return self.conversation_token
 
