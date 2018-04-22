@@ -1,4 +1,5 @@
 from django.test import TestCase
+from django.test.client import Client
 from rest_framework.test import APIRequestFactory, RequestsClient
 
 from .models import Category
@@ -19,6 +20,6 @@ class AnimalTestCase(TestCase):
         # request = factory.get('/categories/')
         # category = demo.factories.CategoryFactory.create()
         # self.assertTrue(category.title in response.content)
-        client = RequestsClient()
+        client = Client()
         response = client.get('http://127.0.0.1:8000/categories/')
         assert response.status_code == 200
