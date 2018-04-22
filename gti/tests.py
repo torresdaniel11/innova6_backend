@@ -2,6 +2,8 @@ from django.test import TestCase
 from django.test.client import Client
 
 from .models import Category
+from .models import Platform
+from .models import FrequentQuestions
 
 import json
 
@@ -14,5 +16,17 @@ class CategoryTestCase(TestCase):
     def test_categories_can_speak_get_all(self):
         client = Client()
         response = client.get('http://127.0.0.1:8000/categories/')
+        assert response.status_code == 200
+        assert len(json.loads(response.content)) == 2
+
+
+class PlatformTestCase(TestCase):
+    def setUp(self):
+        Platform.objects.create(platform_name="MOODLE")
+        Platform.objects.create(platform_name="SICUA")
+
+    def test_categories_can_speak_get_all(self):
+        client = Client()
+        response = client.get('http://127.0.0.1:8000/platforms/')
         assert response.status_code == 200
         assert len(json.loads(response.content)) == 2
