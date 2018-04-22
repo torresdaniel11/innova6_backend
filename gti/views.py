@@ -1,4 +1,5 @@
 import random
+import operator
 from rest_framework import status
 from rest_framework import viewsets
 from rest_framework.response import Response
@@ -99,6 +100,28 @@ class ConversationView(viewsets.ModelViewSet):
             question_record_token=conversation.conversation_token)
         serializer = QuestionRecordsSerializers(questions, many=True)
         return Response(serializer.data)
+
+    @detail_route(methods=['get'])
+    def retrieve_frequency_questions_get(self, request, *args, **kwargs):
+        nameCategory = None
+        conversation = self.get_object()
+
+        questionRecords = models.QuestionRecords.objects.filter(
+            question_record_token=conversation.conversation_token)
+
+        for questionRecord in questionRecords:
+
+            if (questionRecord.question_record_question.question_conversation_level.id == 3):
+                nameCategory = questionRecord.question_record_response
+
+        if (nameCategory != None):
+            category = models.Category.objects.filter(category_name=nameCategory)
+
+            questionRecords = list(models.FrequentQuestion.objects.filter(
+                frequent_questions_category=category))
+
+            serializer = FrequentQuestionSerializers(questionRecords, many=True)
+            return Response(serializer.data)
 
 
 class QuestionView(viewsets.ModelViewSet):

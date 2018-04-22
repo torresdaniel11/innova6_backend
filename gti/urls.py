@@ -11,6 +11,10 @@ suggested_questions_records = views.ConversationView.as_view({
     'get': 'retrieve_response_suggested_questions_post',
 })
 
+retrieve_frequency_questions = views.ConversationView.as_view({
+    'get': 'retrieve_frequency_questions_get',
+})
+
 router = routers.DefaultRouter()
 router.register(r'articles', views.ArticleView)
 router.register(r'conversations', views.ConversationView)
@@ -28,5 +32,7 @@ urlpatterns = [
     url(r'^question_records/(?P<conversation_token>[^/.]+)/questions/$', suggested_questions,
         name='save-response-suggested_questions_post'),
     url(r'^question_records/(?P<conversation_token>[^/.]+)/$', suggested_questions_records,
-        name='save-response-suggested_questions_post')
+        name='save-response-suggested_questions_post'),
+    url(r'^retrieve_frequency_questions/(?P<conversation_token>[^/.]+)/$', retrieve_frequency_questions,
+        name='retrieve_frequency_questions_get')
 ]

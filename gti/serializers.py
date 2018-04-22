@@ -96,9 +96,8 @@ class PlatformSerializers(serializers.HyperlinkedModelSerializer):
 
 class FrequentQuestionSerializers(serializers.HyperlinkedModelSerializer):
     frequent_questions_category = CategorySerializers(many=False)
-
-    # frequent_questions_Platform = PlatformSerializers(many=False)
+    frequent_questions_Platform = PlatformSerializers(many=False)
 
     class Meta:
         model = FrequentQuestion
-        fields = ('id', 'frequent_questions_name', 'frequent_questions_category')
+        fields = ('id', 'frequent_questions_name', 'frequent_questions_category', 'frequent_questions_Platform')
