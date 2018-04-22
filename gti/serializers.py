@@ -8,6 +8,7 @@ from .models import QuestionArticles
 from .models import QuestionRecords
 from .models import EvaluateConversation
 from .models import Questions
+from .models import Platform
 
 
 class ArticlesSerializers(serializers.ModelSerializer):
@@ -84,3 +85,9 @@ class EvaluateConversationSerializers(serializers.HyperlinkedModelSerializer):
         fields = (
             'id', 'evaluate_conversation_score', 'evaluate_conversation_observation',
             'evaluate_conversation_conversation')
+
+
+class PlatformSerializers(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Platform
+        fields = ('id', 'platform_name')

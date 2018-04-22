@@ -6,6 +6,7 @@ from .models import Questions
 from .models import QuestionArticles
 from .models import QuestionRecords
 from .models import Category
+from .models import Platform
 
 
 # Register your models here.
@@ -66,3 +67,11 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Category, CategoryAdmin)
+
+
+class PlatformAdmin(admin.ModelAdmin):
+    list_display = (
+        'id', 'platform_name')
+
+
+admin.site.register(Platform, PlatformAdmin)

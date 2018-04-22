@@ -19,6 +19,7 @@ router.register(r'categories', views.CategoryView)
 router.register(r'question_articles', views.QuestionArticlesView)
 router.register(r'conversation_levels', views.ConversationLevelsView)
 router.register(r'evaluate_conversation', views.EvaluateConversationView)
+router.register(r'platforms', views.PlatformView)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

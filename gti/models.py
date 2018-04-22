@@ -133,3 +133,14 @@ class Articles(models.Model):
         if not self.id:
             self.article_slug = slugify(self.article_tittle)
         super(Articles, self).save(*args, **kwargs)
+
+
+class Platform(models.Model):
+    platform_name = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return self.platform_name
+
+    def save(self, *args, **kwargs):
+        super(Platform, self).save(*args, **kwargs)
+

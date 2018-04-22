@@ -12,6 +12,7 @@ from serializers import CategorySerializers
 from serializers import QuestionRecordsSerializers
 from serializers import ConversationLevelsSerializer
 from serializers import EvaluateConversationSerializers
+from serializers import PlatformSerializers
 
 from .models import QuestionRecords
 
@@ -127,3 +128,8 @@ class QuestionRecordsView(viewsets.ModelViewSet):
 class EvaluateConversationView(viewsets.ModelViewSet):
     queryset = models.EvaluateConversation.objects.all()
     serializer_class = EvaluateConversationSerializers
+
+
+class PlatformView(viewsets.ModelViewSet):
+    queryset = models.Platform.objects.all()
+    serializer_class = PlatformSerializers
