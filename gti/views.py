@@ -110,18 +110,15 @@ class ConversationView(viewsets.ModelViewSet):
             question_record_token=conversation.conversation_token)
 
         for questionRecord in questionRecords:
-
             if (questionRecord.question_record_question.question_conversation_level.id == 3):
                 nameCategory = questionRecord.question_record_response
+                break
 
-        if (nameCategory != None):
-            category = models.Category.objects.filter(category_name=nameCategory)
-
-            questionRecords = list(models.FrequentQuestion.objects.filter(
-                frequent_questions_category=category))
-
-            serializer = FrequentQuestionSerializers(questionRecords, many=True)
-            return Response(serializer.data)
+        category = models.Category.objects.filter(category_name=nameCategory)
+        questionRecords = list(models.FrequentQuestion.objects.filter(
+            frequent_questions_category=category))
+        serializer = FrequentQuestionSerializers(questionRecords, many=True)
+        return Response(serializer.data)
 
 
 class QuestionView(viewsets.ModelViewSet):
