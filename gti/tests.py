@@ -1,25 +1,18 @@
 from django.test import TestCase
 from django.test.client import Client
-from rest_framework.test import APIRequestFactory, RequestsClient
 
 from .models import Category
 
+import json
 
-class AnimalTestCase(TestCase):
+
+class CategoryTestCase(TestCase):
     def setUp(self):
         Category.objects.create(category_name="lion")
         Category.objects.create(category_name="cat")
 
-    def test_animals_can_speak(self):
-        """Animals that can speak are correctly identified"""
-        lion = Category.objects.get(category_name="lion")
-        cat = Category.objects.get(category_name="cat")
-        self.assertEqual(lion.category_name, 'lion')
-        self.assertEqual(cat.category_name, 'cat')
-        factory = APIRequestFactory()
-        # request = factory.get('/categories/')
-        # category = demo.factories.CategoryFactory.create()
-        # self.assertTrue(category.title in response.content)
+    def test_categories_can_speak_get_all(self):
         client = Client()
         response = client.get('http://127.0.0.1:8000/categories/')
         assert response.status_code == 200
+        assert len(json.loads(response.content)) == 2
