@@ -9,6 +9,7 @@ from .models import QuestionRecords
 from .models import EvaluateConversation
 from .models import Questions
 from .models import Platform
+from .models import FrequentQuestion
 
 
 class ArticlesSerializers(serializers.ModelSerializer):
@@ -91,3 +92,13 @@ class PlatformSerializers(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Platform
         fields = ('id', 'platform_name')
+
+
+class FrequentQuestionSerializers(serializers.HyperlinkedModelSerializer):
+    frequent_questions_category = CategorySerializers(many=False)
+
+    # frequent_questions_Platform = PlatformSerializers(many=False)
+
+    class Meta:
+        model = FrequentQuestion
+        fields = ('id', 'frequent_questions_name', 'frequent_questions_category')

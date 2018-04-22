@@ -13,6 +13,7 @@ from serializers import QuestionRecordsSerializers
 from serializers import ConversationLevelsSerializer
 from serializers import EvaluateConversationSerializers
 from serializers import PlatformSerializers
+from serializers import FrequentQuestionSerializers
 
 from .models import QuestionRecords
 
@@ -133,3 +134,8 @@ class EvaluateConversationView(viewsets.ModelViewSet):
 class PlatformView(viewsets.ModelViewSet):
     queryset = models.Platform.objects.all()
     serializer_class = PlatformSerializers
+
+
+class FrequentQuestionView(viewsets.ModelViewSet):
+    queryset = models.FrequentQuestion.objects.all()
+    serializer_class = FrequentQuestionSerializers

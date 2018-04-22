@@ -52,3 +52,9 @@ class FrequentQuestionsTestCase(TestCase):
         response = client.get('http://127.0.0.1:8000/frequent_questions/')
         assert response.status_code == 200
         assert len(json.loads(response.content)) == 4
+
+    def test_frequent_questions_can_speak_get_all_by_category_plataform(self):
+        client = Client()
+        response = client.get('http://127.0.0.1:8000/frequent_questions/')
+        assert response.status_code == 200
+        assert len(json.loads(response.content)) == 4

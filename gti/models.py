@@ -144,3 +144,14 @@ class Platform(models.Model):
     def save(self, *args, **kwargs):
         super(Platform, self).save(*args, **kwargs)
 
+
+class FrequentQuestion(models.Model):
+    frequent_questions_name = models.CharField(max_length=200)
+    frequent_questions_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.DO_NOTHING)
+    frequent_questions_Platform = models.ForeignKey(Platform, null=True, blank=True, on_delete=models.DO_NOTHING)
+
+    def __unicode__(self):
+        return self.frequent_questions_name
+
+    def save(self, *args, **kwargs):
+        super(FrequentQuestion, self).save(*args, **kwargs)
