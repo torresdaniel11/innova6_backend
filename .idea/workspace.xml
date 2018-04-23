@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b50869d-68bd-45dc-8956-785c6934f986" name="Default" comment="Se actualiza modelo">
+    <list default="true" id="6b50869d-68bd-45dc-8956-785c6934f986" name="Default" comment="TEST-01-create-service-by-plataform(Verde)">
+      <change beforePath="$PROJECT_DIR$/.idea/innova6.iml" afterPath="$PROJECT_DIR$/.idea/innova6.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/gti/admin.py" afterPath="$PROJECT_DIR$/gti/admin.py" />
+      <change beforePath="$PROJECT_DIR$/gti/models.py" afterPath="$PROJECT_DIR$/gti/models.py" />
       <change beforePath="$PROJECT_DIR$/gti/serializers.py" afterPath="$PROJECT_DIR$/gti/serializers.py" />
+      <change beforePath="$PROJECT_DIR$/gti/urls.py" afterPath="$PROJECT_DIR$/gti/urls.py" />
+      <change beforePath="$PROJECT_DIR$/gti/views.py" afterPath="$PROJECT_DIR$/gti/views.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,41 +20,81 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_RetrieveConversationsByID.coverage" NAME="Test: gti.tests:RetrieveConversationsByID Coverage Results" MODIFIED="1524436527171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_PlatformTestCase.coverage" NAME="Test: gti.tests:PlatformTestCase Coverage Results" MODIFIED="1524415819091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_FrequentQuestionsTestCase.coverage" NAME="Test: gti.tests:FrequentQuestionsTestCase Coverage Results" MODIFIED="1524437108786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_RetrieveConversationsID.coverage" NAME="Test: gti.tests:RetrieveConversationsID Coverage Results" MODIFIED="1524436668348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1524367794167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_RetrieveRecordsConversationsID.coverage" NAME="Test: gti.tests:RetrieveRecordsConversationsID Coverage Results" MODIFIED="1524436955948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_CategoryTestCase_test_categories_can_speak_get_by_id.coverage" NAME="Test: gti.tests:CategoryTestCase.test_categories_can_speak_get_by_id Coverage Results" MODIFIED="1524435428508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_TypeArticleTestCase.coverage" NAME="Test: gti.tests:TypeArticleTestCase Coverage Results" MODIFIED="1524447200281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_RetrieveFrequencyQuestions1.coverage" NAME="Test: gti.tests:RetrieveFrequencyQuestions1 Coverage Results" MODIFIED="1524436255260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_RetrieveFrequencyQuestions.coverage" NAME="Test: gti.tests:RetrieveFrequencyQuestions Coverage Results" MODIFIED="1524436119712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_FrequentQuestionsTestCase_setUp.coverage" NAME="Test: gti.tests:FrequentQuestionsTestCase.setUp Coverage Results" MODIFIED="1524423895208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_RetrieveFrequencyQuestions_test_frequent_questions_can_speak_get_all_by_category_plataform.coverage" NAME="Test: gti.tests:RetrieveFrequencyQuestions.test_frequent_questions_can_speak_get_all_by_category_plataform Coverage Results" MODIFIED="1524435562649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_CategoryTestCase_test_categories_can_speak_get_all.coverage" NAME="Test: gti.tests:CategoryTestCase.test_categories_can_speak_get_all Coverage Results" MODIFIED="1524434630805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/innova6_backend$views.coverage" NAME="views Coverage Results" MODIFIED="1522369758277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gti" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_RetrieveConversations.coverage" NAME="Test: gti.tests:RetrieveConversations Coverage Results" MODIFIED="1524436649178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_CategoryTestCase.coverage" NAME="Test: gti.tests:CategoryTestCase Coverage Results" MODIFIED="1524435356240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/innova6_backend$Test__gti_tests_AnimalTestCase.coverage" NAME="Test: gti.tests:AnimalTestCase Coverage Results" MODIFIED="1524367138468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gti/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="110" column="21" lean-forward="false" selection-start-line="110" selection-start-column="4" selection-end-line="110" selection-end-column="21" />
+            <state relative-caret-position="213">
+              <caret line="139" column="59" lean-forward="true" selection-start-line="139" selection-start-column="59" selection-end-line="139" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gti/serializers.py">
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gti/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="15" column="135" lean-forward="false" selection-start-line="15" selection-start-column="135" selection-end-line="15" selection-end-column="135" />
+            <state relative-caret-position="1110">
+              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding>
-                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gti/admin.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gti/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" column="102" lean-forward="false" selection-start-line="12" selection-start-column="102" selection-end-line="12" selection-end-column="102" />
+            <state relative-caret-position="500">
+              <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="innova6.iml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/innova6.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gti/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="183" column="21" lean-forward="false" selection-start-line="183" selection-start-column="6" selection-end-line="183" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,44 +110,57 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>datetime</find>
-      <find>question_record_create_date</find>
-      <find>question_conversation_level</find>
-      <find>question_category</find>
-      <find>question_article_article</find>
-      <find>categor</find>
-      <find>question_article_category</find>
-      <find>question_record_conversation</find>
-      <find>cate</find>
-      <find>CategoryAdmin</find>
-      <find>question_conversation_leve</find>
-      <find>ConversationLevelsSerializers</find>
-      <find>TrackSerializerTrackSerializer</find>
-      <find>Questions</find>
-      <find>CategorySerializers</find>
-      <find>QuestionArticles</find>
+      <find>category_name</find>
       <find>QuestionRecords</find>
       <find>question_record_question</find>
-      <find>QuestionArticlesSerializers</find>
-      <find>QuestionArticlesView</find>
-      <find>QuestionRecordsView</find>
-      <find>filt</find>
-      <find>conversation_name</find>
-      <find>question_update</find>
-      <find>serializer</find>
-      <find>QuestionRecordsViewTemp</find>
+      <find>Questions.objects.get</find>
+      <find>objects.get</find>
+      <find>retrieve_response_suggested_questions_post</find>
+      <find>ConversationsSerializers</find>
+      <find>questionser</find>
+      <find>onversation_level</find>
+      <find>filterfilter</find>
+      <find>suggested_frequency_questions</find>
+      <find>question_record_conversation</find>
+      <find>list</find>
+      <find>CORS_ALLOW_HEADERS</find>
+      <find>nameCategory</find>
+      <find>e684c238be3c8318571435637814afb394985b2625de2cff888f0fa68c23</find>
+      <find>get_object_or_404</find>
+      <find>conversation_token</find>
+      <find>conversations</find>
+      <find>retrieve_frequency_questions_get</find>
+      <find>lookup_field</find>
+      <find>Platform</find>
+      <find>arti</find>
+      <find>TypeArticle</find>
+      <find>defa</find>
+      <find>platformPlatform</find>
+      <find>Platfor</find>
+      <find>article</find>
+      <find>Articles</find>
       <find>ConversationLevels</find>
-      <find>default=gti.models.get_conversation_levels_default</find>
-      <find>default</find>
-      <find>Category</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="captuayo &lt;fg.captuayo@uniandes.edu.co&gt;" />
+        <option value="Fredy Gonzalo Captuayo novoa &lt;fg.captuayo@uniandes.edu.co&gt;" />
+        <option value="fg.captuayo@uniandes.edu.co" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
     </option>
   </component>
   <component name="IdeDocumentHistory">
@@ -111,13 +170,17 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/innova6/wsgi.py" />
         <option value="$PROJECT_DIR$/runtime.txt" />
-        <option value="$PROJECT_DIR$/innova6/settings.py" />
-        <option value="$PROJECT_DIR$/gti/urls.py" />
-        <option value="$PROJECT_DIR$/gti/views.py" />
         <option value="$PROJECT_DIR$/gti/migrations/0009_auto_20180419_0834.py" />
-        <option value="$PROJECT_DIR$/gti/admin.py" />
-        <option value="$PROJECT_DIR$/gti/models.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/resumenVentas.py" />
+        <option value="$PROJECT_DIR$/innova6/settings.py" />
         <option value="$PROJECT_DIR$/gti/serializers.py" />
+        <option value="$PROJECT_DIR$/gti/admin.py" />
+        <option value="$PROJECT_DIR$/gti/views.py" />
+        <option value="$PROJECT_DIR$/gti/tests.py" />
+        <option value="$PROJECT_DIR$/gti/models.py" />
+        <option value="$PROJECT_DIR$/gti/urls.py" />
       </list>
     </option>
   </component>
@@ -128,10 +191,33 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="204" />
-    <option name="y" value="48" />
-    <option name="width" value="2741" />
-    <option name="height" value="1826" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>DOM issuesJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -148,8 +234,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,6 +255,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -178,6 +264,18 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="innova6" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="innova6" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="PyCoverageOptionsProvider">
+    <option name="myUseBundledCoveragePy" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -191,7 +289,83 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.innova6">
+  <component name="RunManager" selected="Django tests.Test: gti.tests:TypeArticleTestCase">
+    <configuration name="Test: " type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="innova6" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+    </configuration>
+    <configuration name="Test: gti.tests" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="innova6" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="gti.tests" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+    </configuration>
+    <configuration name="Test: gti.tests:AnimalTestCase" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="innova6" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="gti.tests:AnimalTestCase" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+    </configuration>
+    <configuration name="Test: gti.tests:TypeArticleTestCase" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="innova6" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="gti.tests:TypeArticleTestCase" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+    </configuration>
     <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -234,13 +408,21 @@
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
     </configuration>
-    <list size="2">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.innova6" />
       <item index="1" class="java.lang.String" itemvalue="Python.views" />
+      <item index="2" class="java.lang.String" itemvalue="Django tests.Test: gti.tests" />
+      <item index="3" class="java.lang.String" itemvalue="Django tests.Test: gti.tests:AnimalTestCase" />
+      <item index="4" class="java.lang.String" itemvalue="Django tests.Test: " />
+      <item index="5" class="java.lang.String" itemvalue="Django tests.Test: gti.tests:TypeArticleTestCase" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.views" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Django tests.Test: gti.tests:TypeArticleTestCase" />
+        <item index="1" class="java.lang.String" itemvalue="Django tests.Test: " />
+        <item index="2" class="java.lang.String" itemvalue="Django tests.Test: gti.tests:AnimalTestCase" />
+        <item index="3" class="java.lang.String" itemvalue="Django tests.Test: gti.tests" />
+        <item index="4" class="java.lang.String" itemvalue="Python.views" />
       </list>
     </recent_temporary>
   </component>
@@ -356,83 +538,381 @@
       <option name="project" value="LOCAL" />
       <updated>1522395803225</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Se actualiza modelo">
+      <created>1524336225699</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1524336225699</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Se actualiza actualiza serializador">
+      <created>1524336448751</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1524336448751</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Se actualiza vista">
+      <created>1524336490261</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1524336490261</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Se sube archivo de migración">
+      <created>1524336817576</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1524336817576</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Se actualiza modelo">
+      <created>1524337224043</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1524337224043</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Se actualiza modelo y zerializer">
+      <created>1524342366130</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1524342366130</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Se realiza migración">
+      <created>1524342560102</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1524342560102</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Se actualiza BD de pruebas">
+      <created>1524343658253</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1524343658253</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Se add dependencia necesaria">
+      <created>1524346223729</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1524346223729</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Se actualiza setting">
+      <created>1524349721302</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1524349721302</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Se actualiza modelo con default">
+      <created>1524353264150</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1524353264150</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Se actualiza model para solucionar bug">
+      <created>1524357609548</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1524357609548</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Se carga migración">
+      <created>1524358091265</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1524358091265</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Se crea servicio de Category">
+      <created>1524364439875</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1524364439875</updated>
+    </task>
+    <task id="LOCAL-00029" summary="se modifica test">
+      <created>1524365959437</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1524365959437</updated>
+    </task>
+    <task id="LOCAL-00030" summary="se actuaiza test">
+      <created>1524366073533</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1524366073533</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Se actualiza modelo">
+      <created>1524367296084</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1524367296084</updated>
+    </task>
+    <task id="LOCAL-00032" summary="TEST-01-create-service-by-plataform(Rojo)">
+      <created>1524414333366</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1524414333366</updated>
+    </task>
+    <task id="LOCAL-00033" summary="TEST-01-create-service-by-plataform(Verde)">
+      <created>1524415950313</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1524415950313</updated>
+    </task>
+    <task id="LOCAL-00034" summary="TEST-01-create-service-by-plataform(Verde)">
+      <created>1524416047986</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1524416047986</updated>
+    </task>
+    <task id="LOCAL-00035" summary="TEST-02-create-service-by-get-all-frequent-question(ROJO)">
+      <created>1524424436444</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1524424436444</updated>
+    </task>
+    <task id="LOCAL-00036" summary="TEST-02-create-service-by-get-all-frequent-question(VERDE)">
+      <created>1524424977951</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1524424977952</updated>
+    </task>
+    <task id="LOCAL-00037" summary="TEST-02-create-service-by-get-all-frequent-question(VERDE)">
+      <created>1524425026451</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1524425026451</updated>
+    </task>
+    <task id="LOCAL-00038" summary="TEST-03-create-service-by-get-frequent-question-by-coversation(ROJO)">
+      <created>1524430224988</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1524430224988</updated>
+    </task>
+    <task id="LOCAL-00039" summary="TEST-03-create-service-by-get-frequent-question-by-coversation(VERDE)">
+      <created>1524430258754</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1524430258754</updated>
+    </task>
+    <task id="LOCAL-00040" summary="FIX SETTINGS">
+      <created>1524430402934</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1524430402934</updated>
+    </task>
+    <task id="LOCAL-00041" summary="TEST-04-create-service-by-get-frequent-whit-filter(ROJO)">
+      <created>1524437200623</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1524437200623</updated>
+    </task>
+    <task id="LOCAL-00042" summary="TEST-04-create-service-by-get-frequent-whit-filter(VERDE)">
+      <created>1524437390506</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1524437390506</updated>
+    </task>
+    <task id="LOCAL-00043" summary="TEST-01-create-service-by-type-article(ROJO)">
+      <created>1524444951684</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1524444951684</updated>
+    </task>
+    <task id="LOCAL-00044" summary="TEST-01-create-service-by-type-Article(ROJO)">
+      <created>1524447105945</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1524447105945</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Test__gti_tests_RetrieveConversationsID - 2018.04.22 at 17h 37m 50s.xml">
+      <configuration name="Test: gti.tests:RetrieveConversationsID" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__gti_tests_RetrieveRecordsConversationsID - 2018.04.22 at 17h 38m 27s.xml">
+      <configuration name="Test: gti.tests:RetrieveRecordsConversationsID" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__gti_tests_RetrieveRecordsConversationsID - 2018.04.22 at 17h 38m 56s.xml">
+      <configuration name="Test: gti.tests:RetrieveRecordsConversationsID" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__gti_tests_RetrieveRecordsConversationsID - 2018.04.22 at 17h 39m 17s.xml">
+      <configuration name="Test: gti.tests:RetrieveRecordsConversationsID" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__gti_tests_RetrieveRecordsConversationsID - 2018.04.22 at 17h 39m 44s.xml">
+      <configuration name="Test: gti.tests:RetrieveRecordsConversationsID" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__gti_tests_RetrieveRecordsConversationsID - 2018.04.22 at 17h 40m 05s.xml">
+      <configuration name="Test: gti.tests:RetrieveRecordsConversationsID" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__gti_tests_RetrieveRecordsConversationsID - 2018.04.22 at 17h 41m 04s.xml">
+      <configuration name="Test: gti.tests:RetrieveRecordsConversationsID" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__gti_tests_RetrieveRecordsConversationsID - 2018.04.22 at 17h 43m 21s.xml">
+      <configuration name="Test: gti.tests:RetrieveRecordsConversationsID" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__gti_tests_TypeArticleTestCase - 2018.04.22 at 20h 03m 17s.xml">
+      <configuration name="Test: gti.tests:TypeArticleTestCase" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__gti_tests_TypeArticleTestCase - 2018.04.22 at 20h 33m 39s.xml">
+      <configuration name="Test: gti.tests:TypeArticleTestCase" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="47" width="3226" height="1766" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1984271" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20159681" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2622108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.49192247" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26822558" sideWeight="0.3933764" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3240469" sideWeight="0.6066236" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844576" sideWeight="0.49030694" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.8085622" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51906157" sideWeight="0.7019386" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16478191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36313617" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29325512" sideWeight="0.84814215" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.49192247" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26822558" sideWeight="0.3933764" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.261348" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2657512" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.8085622" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24071527" sideWeight="0.6066236" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.49030694" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27372766" sideWeight="0.7019386" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16235864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3122421" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2957359" sideWeight="0.84814215" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="LONG_EDGES_VISIBLE" value="true" />
+              <option name="BEK_SORT_TYPE" value="1" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Se avanza en el servicio del Chatbot" />
-    <MESSAGE value="Se avanza en el servicio de retrieve conversations" />
-    <MESSAGE value="Se avanza en el servicio de get question" />
-    <MESSAGE value="Se avanza en el servicio de save questions" />
+    <MESSAGE value="Se actualiza vista" />
+    <MESSAGE value="Se sube archivo de migración" />
+    <MESSAGE value="Se actualiza modelo y zerializer" />
+    <MESSAGE value="Se realiza migración" />
+    <MESSAGE value="Se actualiza BD de pruebas" />
+    <MESSAGE value="Se add dependencia necesaria" />
+    <MESSAGE value="Se actualiza setting" />
+    <MESSAGE value="Se actualiza modelo con default" />
+    <MESSAGE value="Se actualiza model para solucionar bug" />
+    <MESSAGE value="Se carga migración" />
+    <MESSAGE value="Se crea servicio de Category" />
+    <MESSAGE value="se modifica test" />
+    <MESSAGE value="se actuaiza test" />
     <MESSAGE value="Se actualiza modelo" />
-    <MESSAGE value="Se crea servicio que lista las categorias de toda la app" />
-    <MESSAGE value="Se crea servicio para almacenar respuestas" />
-    <MESSAGE value="Se cambia de estado de conversaciòn" />
-    <MESSAGE value="Se actualiza modelo para que actualice campos de conversación" />
-    <MESSAGE value="Se actualiza serializable de preguntas" />
-    <MESSAGE value="Se culmina servicio que guarda respuestas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se culmina servicio que guarda respuestas" />
+    <MESSAGE value="TEST-01-create-service-by-plataform(Rojo)" />
+    <MESSAGE value="TEST-01-create-service-by-plataform(Verde)" />
+    <MESSAGE value="TEST-02-create-service-by-get-all-frequent-question(ROJO)" />
+    <MESSAGE value="TEST-02-create-service-by-get-all-frequent-question(VERDE)" />
+    <MESSAGE value="TEST-03-create-service-by-get-frequent-question-by-coversation(ROJO)" />
+    <MESSAGE value="TEST-03-create-service-by-get-frequent-question-by-coversation(VERDE)" />
+    <MESSAGE value="FIX SETTINGS" />
+    <MESSAGE value="TEST-04-create-service-by-get-frequent-whit-filter(ROJO)" />
+    <MESSAGE value="TEST-04-create-service-by-get-frequent-whit-filter(VERDE)" />
+    <MESSAGE value="TEST-01-create-service-by-type-article(ROJO)" />
+    <MESSAGE value="TEST-01-create-service-by-type-Article(ROJO)" />
+    <option name="LAST_COMMIT_MESSAGE" value="TEST-01-create-service-by-type-Article(ROJO)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/innova6/settings.py</url>
-          <line>93</line>
+          <line>117</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
@@ -443,194 +923,60 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="43" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>questionSerializer.get('id')</expression-string>
+        <expression-string>response</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>serializer.data.get('question_record_question', None)</expression-string>
+        <expression-string>response.content</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>serializer..data.get('question_record_question', None)</expression-string>
+        <expression-string>json.loads(response.content)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>serializer.validated_data</expression-string>
+        <expression-string>Response(serializer.data)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>serializer.question_record_question</expression-string>
+        <expression-string>self.kwargs[lookup_url_kwarg]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>serializer</expression-string>
+        <expression-string>self.lookup_field</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>conversation_conversation_level.count()</expression-string>
+        <expression-string>get_object_or_404(queryset, **filter_kwargs)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>question</expression-string>
+        <expression-string>self.filter_queryset(self.get_queryset())</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>serializer.data['question_record_question.id']</expression-string>
+        <expression-string>self.get_queryset()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gti/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gti/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="59" lean-forward="false" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gti/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/django/db/models/fields/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/gti/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gti/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gti/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gti/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gti/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gti/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gti/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/innova6/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gti/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gti/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="6" column="122" lean-forward="false" selection-start-line="6" selection-start-column="122" selection-end-line="6" selection-end-column="122" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/innova6/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gti/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gti/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gti/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -679,7 +1025,7 @@
         <state relative-caret-position="165">
           <caret line="6" column="122" lean-forward="false" selection-start-line="6" selection-start-column="122" selection-end-line="6" selection-end-column="122" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -691,24 +1037,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/innova6/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gti/migrations/0003_auto_20180327_0528.py" />
+    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/rest_framework/response.py" />
+    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/rest_framework/serializers.py" />
+    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/django/db/models/fields/__init__.py" />
+    <entry file="file://$USER_HOME$/innova6_backend_fcaptuayo/lib/python2.7/site-packages/django/db/models/fields/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/gti/migrations/0004_auto_20180330_0332.py" />
+    <entry file="file://$USER_HOME$/innova6_backend_fcaptuayo/lib/python2.7/site-packages/rest_framework/relations.py" />
+    <entry file="file://$USER_HOME$/innova6_backend_fcaptuayo/lib/python2.7/site-packages/rest_framework/views.py" />
+    <entry file="file://$PROJECT_DIR$/gti/migrations/0009_auto_20180419_0834.py" />
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -719,84 +1067,237 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gti/migrations/0003_auto_20180327_0528.py" />
-    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/rest_framework/viewsets.py" />
-    <entry file="file://$PROJECT_DIR$/innova6/urls.py">
+    <entry file="file://$PROJECT_DIR$/../../innova6_backend_fcaptuayo/lib/python2.7/os.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        <state relative-caret-position="8490">
+          <caret line="566" column="39" lean-forward="false" selection-start-line="566" selection-start-column="39" selection-end-line="566" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/rest_framework/views.py" />
-    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/rest_framework/generics.py" />
-    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/rest_framework/response.py" />
-    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/rest_framework/serializers.py" />
-    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/django/db/models/fields/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/gti/tests.py">
+    <entry file="file://$PROJECT_DIR$/../../innova6_backend_fcaptuayo/lib/python2.7/site-packages/rest_framework/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="7170">
+          <caret line="535" column="8" lean-forward="false" selection-start-line="535" selection-start-column="8" selection-end-line="535" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/innova6_backend_fcaptuayo/lib/python2.7/site-packages/django/db/models/fields/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/gti/migrations/0004_auto_20180330_0332.py" />
-    <entry file="file://$USER_HOME$/innova6_backend_fcaptuayo/lib/python2.7/site-packages/rest_framework/relations.py" />
-    <entry file="file://$USER_HOME$/innova6_backend_fcaptuayo/lib/python2.7/site-packages/rest_framework/views.py" />
-    <entry file="file://$PROJECT_DIR$/gti/urls.py">
+    <entry file="file://$PROJECT_DIR$/../../innova6_backend_fcaptuayo/lib/python2.7/site-packages/rest_framework/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="900">
+          <caret line="79" column="48" lean-forward="false" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gti/views.py">
+    <entry file="file://$PROJECT_DIR$/../../innova6_backend_fcaptuayo/lib/python2.7/site-packages/rest_framework/viewsets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3333">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        <state relative-caret-position="1290">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gti/migrations/0009_auto_20180419_0834.py" />
-    <entry file="file://$PROJECT_DIR$/innova6/settings.py">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2065">
-          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gti/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-3639">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gti/admin.py">
+    <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="102" lean-forward="false" selection-start-line="12" selection-start-column="102" selection-end-line="12" selection-end-column="102" />
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/django_nose/runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6030">
+          <caret line="421" column="6" lean-forward="false" selection-start-line="421" selection-start-column="6" selection-end-line="421" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/innova6/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="454" column="0" lean-forward="false" selection-start-line="454" selection-start-column="0" selection-end-line="454" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gti/models.py">
+    <entry file="file://$PROJECT_DIR$/resumenVentas.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="110" column="21" lean-forward="false" selection-start-line="110" selection-start-column="4" selection-end-line="110" selection-end-column="21" />
+        <state relative-caret-position="225">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/rest_framework/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4620">
+          <caret line="321" column="0" lean-forward="false" selection-start-line="321" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/django/db/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2100">
+          <caret line="164" column="8" lean-forward="false" selection-start-line="164" selection-start-column="8" selection-end-line="164" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/psycopg2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/innova6/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="143" column="38" lean-forward="true" selection-start-line="143" selection-start-column="38" selection-end-line="143" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/rest_framework/viewsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/django/views/decorators/csrf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="248" column="32" lean-forward="true" selection-start-line="248" selection-start-column="32" selection-end-line="248" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/rest_framework/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="488" column="35" lean-forward="false" selection-start-line="488" selection-start-column="35" selection-end-line="488" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../uniandes/procesos/venv/lib/python2.7/site-packages/rest_framework/generics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gti/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="15" column="135" lean-forward="false" selection-start-line="15" selection-start-column="135" selection-end-line="15" selection-end-column="135" />
+        <state relative-caret-position="234">
+          <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gti/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="89" column="41" lean-forward="true" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gti/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/django_test_manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="166" column="0" lean-forward="true" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gti/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gti/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="139" column="59" lean-forward="true" selection-start-line="139" selection-start-column="59" selection-end-line="139" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gti/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="183" column="21" lean-forward="false" selection-start-line="183" selection-start-column="6" selection-end-line="183" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gti/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/innova6.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

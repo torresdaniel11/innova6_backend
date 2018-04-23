@@ -118,23 +118,6 @@ class QuestionRecords(models.Model):
         super(QuestionRecords, self).save(*args, **kwargs)
 
 
-class Articles(models.Model):
-    article_tittle = models.CharField(max_length=200)
-    article_content = models.TextField()
-    article_slug = models.SlugField(editable=False)
-    article_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
-    article_update_date = models.DateTimeField(auto_now=True, blank=True, null=True)
-    question_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.DO_NOTHING)
-
-    def __unicode__(self):
-        return self.article_tittle
-
-    def save(self, *args, **kwargs):
-        if not self.id:
-            self.article_slug = slugify(self.article_tittle)
-        super(Articles, self).save(*args, **kwargs)
-
-
 class Platform(models.Model):
     platform_name = models.CharField(max_length=200)
 
@@ -155,3 +138,32 @@ class FrequentQuestion(models.Model):
 
     def save(self, *args, **kwargs):
         super(FrequentQuestion, self).save(*args, **kwargs)
+
+
+class TypeArticle(models.Model):
+    type_article_name = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return self.type_article_name
+
+    def save(self, *args, **kwargs):
+        super(TypeArticle, self).save(*args, **kwargs)
+
+
+class Articles(models.Model):
+    article_tittle = models.CharField(max_length=200)
+    article_content = models.TextField()
+    article_slug = models.SlugField(editable=False)
+    article_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    article_update_date = models.DateTimeField(auto_now=True, blank=True, null=True)
+    question_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.DO_NOTHING)
+    article_url = models.TextField(null=True, blank=True)
+    article_type_article = models.ForeignKey(TypeArticle, null=True, blank=True, on_delete=models.DO_NOTHING)
+
+    def __unicode__(self):
+        return self.article_tittle
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.article_slug = slugify(self.article_tittle)
+        super(Articles, self).save(*args, **kwargs)
