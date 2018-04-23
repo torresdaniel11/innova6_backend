@@ -158,12 +158,14 @@ class RetrieveArticlesByTokenConversation(TestCase):
 
         typeArticule = TypeArticle.objects.create(platform_name="INTERNO")
 
+
         Articles.objects.create(article_tittle="Calificaciones",
                                 article_content="Calificaciones",
                                 article_slug="Calificaciones",
                                 question_category=category_two,
                                 article_url="n/a",
                                 article_type_article=typeArticule)
+
 
         def test_frequent_questions_can_speak_get_all_by_category_plataform(self):
             client = Client()
