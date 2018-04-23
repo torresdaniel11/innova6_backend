@@ -10,14 +10,7 @@ from .models import EvaluateConversation
 from .models import Questions
 from .models import Platform
 from .models import FrequentQuestion
-
-
-class ArticlesSerializers(serializers.ModelSerializer):
-    class Meta:
-        model = Articles
-        fields = (
-            'id', 'article_tittle', 'article_content', 'article_slug', 'article_create_date', 'article_update_date',
-            'question_category')
+from .models import TypeArticle
 
 
 class ConversationLevelsSerializer(serializers.ModelSerializer):
@@ -101,3 +94,21 @@ class FrequentQuestionSerializers(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = FrequentQuestion
         fields = ('id', 'frequent_questions_name', 'frequent_questions_category', 'frequent_questions_Platform')
+
+
+class TypeArticleSerializers(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = TypeArticle
+        fields = ('id', 'type_article_name')
+
+
+class ArticlesSerializers(serializers.ModelSerializer):
+    question_category = CategorySerializers(many=False)
+    article_Platform = PlatformSerializers(many=False)
+    article_type_article = TypeArticleSerializers(many=False)
+
+    class Meta:
+        model = Articles
+        fields = (
+            'id', 'article_tittle', 'article_content', 'article_slug', 'article_create_date', 'article_update_date',
+            'question_category', 'article_Platform', 'article_url', 'article_type_article')
