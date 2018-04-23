@@ -41,3 +41,16 @@ Para este desarrollo hemos hecho uso de la siguiente tecnologia para el analisis
 
 * Codacy
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/eb5050a13f104b7490d2f50411a7b568)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=torresdaniel11/innova6_backend&amp;utm_campaign=Badge_Grade)
+
+
+### TDD:
+Para este desarrollo hemos hecho uso de TDD en las siguientes historias de usuario:
+
+HU-015
+Como usuario me gustaria que el chatbot me presentara un listado de preguntas frecuentes que tienen que ver con mis consultas para poder identificar facilmente la respuesta a mi consulta.
+Rama TDD: TDD-HU-015
+
+HU-018
+Como usuario me gustaria que el chatbot me hiciera sugerencias de contenidos a consultar (videos, manuales) para poder tener mas facilidad para acceder a recursos disponibles en el sitio web.
+Rama TDD: TDD-HU-018
+
