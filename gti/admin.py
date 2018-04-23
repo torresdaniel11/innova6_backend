@@ -6,6 +6,9 @@ from .models import Questions
 from .models import QuestionArticles
 from .models import QuestionRecords
 from .models import Category
+from .models import Platform
+from .models import FrequentQuestion
+from .models import TypeArticle
 
 
 # Register your models here.
@@ -66,3 +69,27 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Category, CategoryAdmin)
+
+
+class PlatformAdmin(admin.ModelAdmin):
+    list_display = (
+        'id', 'platform_name')
+
+
+admin.site.register(Platform, PlatformAdmin)
+
+
+class FrequentQuestionAdmin(admin.ModelAdmin):
+    list_display = (
+        'id', 'frequent_questions_name')
+
+
+admin.site.register(FrequentQuestion, FrequentQuestionAdmin)
+
+
+class TypeArticleAdmin(admin.ModelAdmin):
+    list_display = (
+        'id', 'type_article_name')
+
+
+admin.site.register(TypeArticle, TypeArticleAdmin)

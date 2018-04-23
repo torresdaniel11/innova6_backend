@@ -6,20 +6,23 @@ from .models import ConversationLevels
 from .models import Conversations
 from .models import QuestionArticles
 from .models import QuestionRecords
+from .models import EvaluateConversation
 from .models import Questions
-
-
-class ArticlesSerializers(serializers.ModelSerializer):
-    class Meta:
-        model = Articles
-        fields = (
-            'id', 'article_tittle', 'article_content', 'article_slug', 'article_create_date', 'article_update_date', 'question_category')
+from .models import Platform
+from .models import FrequentQuestion
+from .models import TypeArticle
 
 
 class ConversationLevelsSerializer(serializers.ModelSerializer):
     class Meta:
         model = ConversationLevels
         fields = ('id', 'conversation_level_name', 'conversation_color')
+
+
+class TypeArticleSerializers(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = TypeArticle
+        fields = ('id', 'type_article_name')
 
 
 class ConversationsSerializers(serializers.HyperlinkedModelSerializer):
@@ -47,7 +50,9 @@ class QuestionsSerializers(serializers.HyperlinkedModelSerializer):
         model = Questions
         fields = (
             'id', 'question_name', 'question_description', 'question_keywords', 'question_conversation_level',
-            'question_category', 'question_replace', 'question_update', 'question_field_update')
+            'question_category', 'question_replace', 'question_update', 'question_field_update',
+            'question_load_question', 'question_load_article', 'question_evaluate_one', 'question_evaluate_two',
+            'question_platform', 'question_finish')
 
 
 class QuestionArticlesSerializers(serializers.HyperlinkedModelSerializer):
@@ -70,3 +75,39 @@ class QuestionRecordsSerializers(serializers.HyperlinkedModelSerializer):
         fields = (
             'id', 'question_record_response', 'question_record_conversation', 'question_record_question',
             'question_record_token', 'question_record_create_date')
+
+
+class EvaluateConversationSerializers(serializers.HyperlinkedModelSerializer):
+    question_record_conversation = ConversationsSerializers(many=False)
+
+    class Meta:
+        model = EvaluateConversation
+        fields = (
+            'id', 'evaluate_conversation_score', 'evaluate_conversation_observation',
+            'evaluate_conversation_conversation')
+
+
+class PlatformSerializers(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Platform
+        fields = ('id', 'platform_name')
+
+
+class FrequentQuestionSerializers(serializers.HyperlinkedModelSerializer):
+    frequent_questions_category = CategorySerializers(many=False)
+    frequent_questions_Platform = PlatformSerializers(many=False)
+
+    class Meta:
+        model = FrequentQuestion
+        fields = ('id', 'frequent_questions_name', 'frequent_questions_category', 'frequent_questions_Platform')
+
+
+class ArticlesSerializers(serializers.ModelSerializer):
+    question_category = CategorySerializers(many=False)
+    article_type_article = TypeArticleSerializers(many=False)
+
+    class Meta:
+        model = Articles
+        fields = (
+            'id', 'article_tittle', 'article_content', 'article_slug', 'article_create_date', 'article_update_date',
+            'question_category', 'article_url', 'article_type_article')
