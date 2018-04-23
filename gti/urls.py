@@ -20,6 +20,7 @@ retrieve_article = views.ConversationView.as_view({
 })
 
 router = routers.DefaultRouter()
+router.register(r'type_articles', views.TypeArticleView)
 router.register(r'articles', views.ArticleView)
 router.register(r'conversations', views.ConversationView)
 router.register(r'questions', views.QuestionView)
@@ -29,7 +30,7 @@ router.register(r'conversation_levels', views.ConversationLevelsView)
 router.register(r'evaluate_conversation', views.EvaluateConversationView)
 router.register(r'platforms', views.PlatformView)
 router.register(r'frequent_questions', views.FrequentQuestionView)
-router.register(r'type_articles', views.TypeArticleSerializers)
+
 
 urlpatterns = [
     url(r'^', include(router.urls)),

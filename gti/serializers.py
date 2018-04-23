@@ -19,6 +19,12 @@ class ConversationLevelsSerializer(serializers.ModelSerializer):
         fields = ('id', 'conversation_level_name', 'conversation_color')
 
 
+class TypeArticleSerializers(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = TypeArticle
+        fields = ('id', 'type_article_name')
+
+
 class ConversationsSerializers(serializers.HyperlinkedModelSerializer):
     conversation_conversation_level = ConversationLevelsSerializer(many=False, read_only=True, required=False)
 
@@ -96,19 +102,13 @@ class FrequentQuestionSerializers(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'frequent_questions_name', 'frequent_questions_category', 'frequent_questions_Platform')
 
 
-class TypeArticleSerializers(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = TypeArticle
-        fields = ('id', 'type_article_name')
-
-
 class ArticlesSerializers(serializers.ModelSerializer):
     question_category = CategorySerializers(many=False)
-    article_Platform = PlatformSerializers(many=False)
+    # article_Platform = PlatformSerializers(many=False)
     article_type_article = TypeArticleSerializers(many=False)
 
     class Meta:
         model = Articles
         fields = (
             'id', 'article_tittle', 'article_content', 'article_slug', 'article_create_date', 'article_update_date',
-            'question_category', 'article_Platform', 'article_url', 'article_type_article')
+            'question_category', 'article_url', 'article_type_article')
