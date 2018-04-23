@@ -1,4 +1,5 @@
 import random
+import operator
 from rest_framework import status
 from rest_framework import viewsets
 from rest_framework.response import Response
@@ -12,6 +13,9 @@ from serializers import CategorySerializers
 from serializers import QuestionRecordsSerializers
 from serializers import ConversationLevelsSerializer
 from serializers import EvaluateConversationSerializers
+from serializers import PlatformSerializers
+from serializers import FrequentQuestionSerializers
+from serializers import TypeArticleSerializers
 
 from .models import QuestionRecords
 
@@ -98,6 +102,44 @@ class ConversationView(viewsets.ModelViewSet):
         serializer = QuestionRecordsSerializers(questions, many=True)
         return Response(serializer.data)
 
+    @detail_route(methods=['get'])
+    def retrieve_frequency_questions_get(self, request, *args, **kwargs):
+        nameCategory = None
+        conversation = self.get_object()
+
+        questionRecords = models.QuestionRecords.objects.filter(
+            question_record_token=conversation.conversation_token)
+
+        for questionRecord in questionRecords:
+            if (questionRecord.question_record_question.question_conversation_level.id == 3):
+                nameCategory = questionRecord.question_record_response
+                break
+
+        category = models.Category.objects.filter(category_name=nameCategory)
+        questionRecords = list(models.FrequentQuestion.objects.filter(
+            frequent_questions_category=category))
+        serializer = FrequentQuestionSerializers(questionRecords, many=True)
+        return Response(serializer.data)
+
+    @detail_route(methods=['get'])
+    def retrieve_article_get(self, request, *args, **kwargs):
+        nameCategory = None
+        conversation = self.get_object()
+
+        questionRecords = models.QuestionRecords.objects.filter(
+            question_record_token=conversation.conversation_token)
+
+        for questionRecord in questionRecords:
+            if (questionRecord.question_record_question.question_conversation_level.id == 3):
+                nameCategory = questionRecord.question_record_response
+                break
+
+        category = models.Category.objects.filter(category_name=nameCategory)
+        questionRecords = list(models.Articles.objects.filter(
+            question_category=category))
+        serializer = ArticlesSerializers(questionRecords, many=True)
+        return Response(serializer.data)
+
 
 class QuestionView(viewsets.ModelViewSet):
     queryset = models.Questions.objects.all()
@@ -127,3 +169,18 @@ class QuestionRecordsView(viewsets.ModelViewSet):
 class EvaluateConversationView(viewsets.ModelViewSet):
     queryset = models.EvaluateConversation.objects.all()
     serializer_class = EvaluateConversationSerializers
+
+
+class PlatformView(viewsets.ModelViewSet):
+    queryset = models.Platform.objects.all()
+    serializer_class = PlatformSerializers
+
+
+class FrequentQuestionView(viewsets.ModelViewSet):
+    queryset = models.FrequentQuestion.objects.all()
+    serializer_class = FrequentQuestionSerializers
+
+
+class TypeArticleView(viewsets.ModelViewSet):
+    queryset = models.TypeArticle.objects.all()
+    serializer_class = TypeArticleSerializers

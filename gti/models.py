@@ -75,10 +75,12 @@ class Questions(models.Model):
     question_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.DO_NOTHING)
     question_update = models.BooleanField(default=False)
     question_replace = models.BooleanField(default=False)
+    question_platform = models.BooleanField(default=False)
     question_load_question = models.BooleanField(default=False)
     question_load_article = models.BooleanField(default=False)
     question_evaluate_one = models.BooleanField(default=False)
     question_evaluate_two = models.BooleanField(default=False)
+    question_finish = models.BooleanField(default=False)
     question_field_update = models.TextField(null=True, blank=True)
 
     def __unicode__(self):
@@ -116,6 +118,38 @@ class QuestionRecords(models.Model):
         super(QuestionRecords, self).save(*args, **kwargs)
 
 
+class Platform(models.Model):
+    platform_name = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return self.platform_name
+
+    def save(self, *args, **kwargs):
+        super(Platform, self).save(*args, **kwargs)
+
+
+class FrequentQuestion(models.Model):
+    frequent_questions_name = models.CharField(max_length=200)
+    frequent_questions_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.DO_NOTHING)
+    frequent_questions_Platform = models.ForeignKey(Platform, null=True, blank=True, on_delete=models.DO_NOTHING)
+
+    def __unicode__(self):
+        return self.frequent_questions_name
+
+    def save(self, *args, **kwargs):
+        super(FrequentQuestion, self).save(*args, **kwargs)
+
+
+class TypeArticle(models.Model):
+    type_article_name = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return self.type_article_name
+
+    def save(self, *args, **kwargs):
+        super(TypeArticle, self).save(*args, **kwargs)
+
+
 class Articles(models.Model):
     article_tittle = models.CharField(max_length=200)
     article_content = models.TextField()
@@ -123,6 +157,8 @@ class Articles(models.Model):
     article_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     article_update_date = models.DateTimeField(auto_now=True, blank=True, null=True)
     question_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.DO_NOTHING)
+    article_url = models.TextField(null=True, blank=True)
+    article_type_article = models.ForeignKey(TypeArticle, null=True, blank=True, on_delete=models.DO_NOTHING)
 
     def __unicode__(self):
         return self.article_tittle

@@ -138,4 +138,7 @@ STATIC_ROOT = (os.path.join(BASE_DIR, '/gti/static'))
 # Rest framework setting
 # Use rest_framework.permissions.IsAuthenticatedOrReadOnly to read json
 REST_FRAMEWORK = {
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
 }
+
+CORS_ALLOW_HEADERS = ('x-requested-with', 'content-type', 'accept', 'origin', 'authorization', 'x-csrftoken')
