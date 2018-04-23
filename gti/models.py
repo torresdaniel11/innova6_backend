@@ -41,8 +41,7 @@ class Conversations(models.Model):
     conversation_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     conversation_update_date = models.DateTimeField(auto_now=True, blank=True, null=True)
     conversation_conversation_level = models.ForeignKey(ConversationLevels, editable=False, null=True, blank=True,
-                                                        on_delete=models.DO_NOTHING,
-                                                        default=get_conversation_levels_default)
+                                                        on_delete=models.DO_NOTHING)
 
     def __unicode__(self):
         return self.conversation_token
@@ -157,7 +156,7 @@ class Articles(models.Model):
     article_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     article_update_date = models.DateTimeField(auto_now=True, blank=True, null=True)
     question_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.DO_NOTHING)
-    article_url = models.TextField(null=True)
+    article_url = models.TextField(null=True, blank=True)
     article_type_article = models.ForeignKey(TypeArticle, null=True, blank=True, on_delete=models.DO_NOTHING)
 
     def __unicode__(self):
