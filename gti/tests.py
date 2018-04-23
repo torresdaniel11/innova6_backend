@@ -161,6 +161,7 @@ class RetrieveArticlesByTokenConversation(TestCase):
             'http://127.0.0.1:8000/retrieve_frequency_questions/e684c238be3c8318571435637814afb394985b2625de2cff888f0fa68c23/')
         assert response.status_code == 200
 
+
 class TypeArticleTestCase(TestCase):
     def setUp(self):
         TypeArticle.objects.create(platform_name="INTERNO")
@@ -170,6 +171,6 @@ class TypeArticleTestCase(TestCase):
 
     def test_categories_can_speak_get_all(self):
         client = Client()
-        response = client.get('http://127.0.0.1:8000/type_article/')
+        response = client.get('http://127.0.0.1:8000/type_articles/')
         assert response.status_code == 200
         assert len(json.loads(response.content)) == 4
