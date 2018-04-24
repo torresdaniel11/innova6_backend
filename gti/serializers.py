@@ -103,7 +103,6 @@ class FrequentQuestionSerializers(serializers.HyperlinkedModelSerializer):
 
 
 class ArticlesSerializers(serializers.ModelSerializer):
-    question_category = CategorySerializers(many=False, read_only=True, required=False)
     article_type_article = TypeArticleSerializers(many=False, read_only=True, required=False)
 
     class Meta:
