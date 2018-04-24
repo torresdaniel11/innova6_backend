@@ -103,11 +103,23 @@ class FrequentQuestionSerializers(serializers.HyperlinkedModelSerializer):
 
 
 class ArticlesSerializers(serializers.ModelSerializer):
-    question_category = CategorySerializers(many=False, read_only=True, required=False)
-    article_type_article = TypeArticleSerializers(many=False, read_only=True, required=False)
+    question_category = CategorySerializers(many=False, required=False)
+    article_type_article = TypeArticleSerializers(many=False, required=False)
 
     class Meta:
         model = Articles
         fields = (
             'id', 'article_tittle', 'article_content', 'article_slug', 'article_create_date', 'article_update_date',
             'question_category', 'article_url', 'article_type_article')
+
+    def create(self, validated_data):
+        article_type_article = TypeArticle.objects.get(
+            type_article_name=validated_data['article_type_article']['type_article_name'])
+        question_category = Category.objects.get(
+            category_name=validated_data['question_category']['category_name'])
+        return Articles.objects.create(article_tittle=validated_data['article_tittle'],
+                                       article_content=validated_data['article_content'],
+                                       article_slug="n/A",
+                                       article_url=validated_data['article_url'],
+                                       article_type_article=article_type_article,
+                                       question_category=question_category)
