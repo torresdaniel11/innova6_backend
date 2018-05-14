@@ -16,6 +16,7 @@ from serializers import EvaluateConversationSerializers
 from serializers import PlatformSerializers
 from serializers import FrequentQuestionSerializers
 from serializers import TypeArticleSerializers
+from serializers import ConfigSerializers
 
 from .models import QuestionRecords
 
@@ -184,3 +185,9 @@ class FrequentQuestionView(viewsets.ModelViewSet):
 class TypeArticleView(viewsets.ModelViewSet):
     queryset = models.TypeArticle.objects.all()
     serializer_class = TypeArticleSerializers
+
+
+class ConfigView(viewsets.ModelViewSet):
+    queryset = models.Config.objects.all()
+    serializer_class = ConfigSerializers
+

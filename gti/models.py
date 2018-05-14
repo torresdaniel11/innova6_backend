@@ -41,8 +41,7 @@ class Conversations(models.Model):
     conversation_create_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     conversation_update_date = models.DateTimeField(auto_now=True, blank=True, null=True)
     conversation_conversation_level = models.ForeignKey(ConversationLevels, editable=False, null=True, blank=True,
-                                                        on_delete=models.DO_NOTHING,
-                                                        default=get_conversation_levels_default)
+                                                        on_delete=models.DO_NOTHING)
 
     def __unicode__(self):
         return self.conversation_token
@@ -167,3 +166,10 @@ class Articles(models.Model):
         if not self.id:
             self.article_slug = slugify(self.article_tittle)
         super(Articles, self).save(*args, **kwargs)
+
+
+class Config(models.Model):
+    timeout = models.CharField(max_length=200)
+
+    def save(self, *args, **kwargs):
+        super(Config, self).save(*args, **kwargs)

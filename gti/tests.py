@@ -10,6 +10,7 @@ from .models import QuestionRecords
 from .models import Questions
 from .models import TypeArticle
 from .models import Articles
+from .models import Config
 
 import json
 
@@ -158,7 +159,6 @@ class RetrieveArticlesByTokenConversation(TestCase):
 
         typeArticule = TypeArticle.objects.create(platform_name="INTERNO")
 
-
         Articles.objects.create(article_tittle="Calificaciones",
                                 article_content="Calificaciones",
                                 article_slug="Calificaciones",
@@ -166,22 +166,33 @@ class RetrieveArticlesByTokenConversation(TestCase):
                                 article_url="n/a",
                                 article_type_article=typeArticule)
 
-
         def test_frequent_questions_can_speak_get_all_by_category_plataform(self):
             client = Client()
             response = client.get(
                 'http://127.0.0.1:8000/retrieve_article/e684c238be3c8318571435637814afb394985b2625de2cff888f0fa68c23/')
             assert response.status_code == 200
 
-    class TypeArticleTestCase(TestCase):
-        def setUp(self):
-            TypeArticle.objects.create(platform_name="INTERNO")
-            TypeArticle.objects.create(platform_name="PDF")
-            TypeArticle.objects.create(platform_name="YOUTUBE")
-            TypeArticle.objects.create(platform_name="PAGINA WEB")
 
-        def test_categories_can_speak_get_all(self):
-            client = Client()
-            response = client.get('http://127.0.0.1:8000/type_articles/')
-            assert response.status_code == 200
-            assert len(json.loads(response.content)) == 4
+class TypeArticleTestCase(TestCase):
+    def setUp(self):
+        TypeArticle.objects.create(type_article_name="INTERNO")
+        TypeArticle.objects.create(type_article_name="PDF")
+        TypeArticle.objects.create(type_article_name="YOUTUBE")
+        TypeArticle.objects.create(type_article_name="PAGINA WEB")
+
+    def test_categories_can_speak_get_all(self):
+        client = Client()
+        response = client.get('http://127.0.0.1:8000/type_articles/')
+        assert response.status_code == 200
+        assert len(json.loads(response.content)) == 4
+
+
+class ConfigTestCase(TestCase):
+    def setUp(self):
+        Config.objects.create(timeout="900000")
+
+    def test_categories_can_speak_get_all(self):
+        client = Client()
+        response = client.get('http://127.0.0.1:8000/configs/')
+        assert response.status_code == 200
+        assert len(json.loads(response.content)) == 1

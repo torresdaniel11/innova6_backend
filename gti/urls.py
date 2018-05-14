@@ -30,7 +30,7 @@ router.register(r'conversation_levels', views.ConversationLevelsView)
 router.register(r'evaluate_conversation', views.EvaluateConversationView)
 router.register(r'platforms', views.PlatformView)
 router.register(r'frequent_questions', views.FrequentQuestionView)
-
+router.register(r'configs', views.ConfigView)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

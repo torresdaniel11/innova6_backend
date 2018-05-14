@@ -11,6 +11,7 @@ from .models import Questions
 from .models import Platform
 from .models import FrequentQuestion
 from .models import TypeArticle
+from .models import Config
 
 
 class ConversationLevelsSerializer(serializers.ModelSerializer):
@@ -123,3 +124,9 @@ class ArticlesSerializers(serializers.ModelSerializer):
                                        article_url=validated_data['article_url'],
                                        article_type_article=article_type_article,
                                        question_category=question_category)
+
+
+class ConfigSerializers(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Config
+        fields = ('id', 'timeout')
