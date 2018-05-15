@@ -9,6 +9,8 @@ from .models import Category
 from .models import Platform
 from .models import FrequentQuestion
 from .models import TypeArticle
+from .models import Config
+from .models import TypeUser
 
 
 # Register your models here.
@@ -93,3 +95,19 @@ class TypeArticleAdmin(admin.ModelAdmin):
 
 
 admin.site.register(TypeArticle, TypeArticleAdmin)
+
+
+class ConfigAdmin(admin.ModelAdmin):
+    list_display = (
+        'id', 'timeout')
+
+
+admin.site.register(Config, ConfigAdmin)
+
+
+class TypeUserAdmin(admin.ModelAdmin):
+    list_display = (
+        'id', 'type_user_name')
+
+
+admin.site.register(TypeUser, TypeUserAdmin)

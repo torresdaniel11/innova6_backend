@@ -80,6 +80,7 @@ class Questions(models.Model):
     question_evaluate_one = models.BooleanField(default=False)
     question_evaluate_two = models.BooleanField(default=False)
     question_finish = models.BooleanField(default=False)
+    question_type_user = models.BooleanField(default=False)
     question_field_update = models.TextField(null=True, blank=True)
 
     def __unicode__(self):
@@ -173,3 +174,10 @@ class Config(models.Model):
 
     def save(self, *args, **kwargs):
         super(Config, self).save(*args, **kwargs)
+
+
+class TypeUser(models.Model):
+    type_user_name = models.CharField(max_length=200)
+
+    def save(self, *args, **kwargs):
+        super(TypeUser, self).save(*args, **kwargs)

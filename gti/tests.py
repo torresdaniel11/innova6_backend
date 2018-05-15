@@ -196,3 +196,4 @@ class ConfigTestCase(TestCase):
         response = client.get('http://127.0.0.1:8000/configs/')
         assert response.status_code == 200
         assert len(json.loads(response.content)) == 1
+

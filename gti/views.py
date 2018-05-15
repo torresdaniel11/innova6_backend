@@ -17,6 +17,7 @@ from serializers import PlatformSerializers
 from serializers import FrequentQuestionSerializers
 from serializers import TypeArticleSerializers
 from serializers import ConfigSerializers
+from serializers import TypeUserSerializers
 
 from .models import QuestionRecords
 
@@ -191,3 +192,7 @@ class ConfigView(viewsets.ModelViewSet):
     queryset = models.Config.objects.all()
     serializer_class = ConfigSerializers
 
+
+class TypeUserView(viewsets.ModelViewSet):
+    queryset = models.TypeUser.objects.all()
+    serializer_class = TypeUserSerializers

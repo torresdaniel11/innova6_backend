@@ -12,6 +12,7 @@ from .models import Platform
 from .models import FrequentQuestion
 from .models import TypeArticle
 from .models import Config
+from .models import TypeUser
 
 
 class ConversationLevelsSerializer(serializers.ModelSerializer):
@@ -130,3 +131,9 @@ class ConfigSerializers(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Config
         fields = ('id', 'timeout')
+
+
+class TypeUserSerializers(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = TypeUser
+        fields = ('id', 'type_user_name')

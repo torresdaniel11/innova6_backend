@@ -31,6 +31,7 @@ router.register(r'evaluate_conversation', views.EvaluateConversationView)
 router.register(r'platforms', views.PlatformView)
 router.register(r'frequent_questions', views.FrequentQuestionView)
 router.register(r'configs', views.ConfigView)
+router.register(r'type_users', views.TypeUserView)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
