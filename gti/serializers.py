@@ -80,7 +80,7 @@ class QuestionRecordsSerializers(serializers.HyperlinkedModelSerializer):
 
 
 class EvaluateConversationSerializers(serializers.HyperlinkedModelSerializer):
-    question_record_conversation = ConversationsSerializers(many=False)
+    evaluate_conversation_conversation = ConversationsSerializers(many=False)
 
     class Meta:
         model = EvaluateConversation
