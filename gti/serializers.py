@@ -54,7 +54,7 @@ class QuestionsSerializers(serializers.HyperlinkedModelSerializer):
             'id', 'question_name', 'question_description', 'question_keywords', 'question_conversation_level',
             'question_category', 'question_replace', 'question_update', 'question_field_update',
             'question_load_question', 'question_load_article', 'question_evaluate_one', 'question_evaluate_two',
-            'question_platform', 'question_finish')
+            'question_platform', 'question_finish', 'question_type_user')
 
 
 class QuestionArticlesSerializers(serializers.HyperlinkedModelSerializer):
