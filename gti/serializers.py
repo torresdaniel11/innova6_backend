@@ -111,7 +111,8 @@ class ArticlesSerializers(serializers.ModelSerializer):
     class Meta:
         model = Articles
         fields = (
-            'id', 'article_tittle', 'article_content', 'article_slug', 'article_create_date', 'article_update_date',
+            'id', 'article_tittle', 'article_content', 'article_slug', 'article_create_date',
+            'article_update_date',
             'question_category', 'article_url', 'article_type_article')
 
     def create(self, validated_data):
