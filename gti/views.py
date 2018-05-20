@@ -132,7 +132,7 @@ class ConversationView(viewsets.ModelViewSet):
             question_record_token=conversation.conversation_token)
 
         for questionRecord in questionRecords:
-            if (questionRecord.question_record_question.question_conversation_level.id == 3):
+            if (questionRecord.question_record_question.question_conversation_level.id == 4):
                 nameCategory = questionRecord.question_record_response
                 break
 
