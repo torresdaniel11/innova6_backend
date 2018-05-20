@@ -37,7 +37,7 @@ class ConversationView(viewsets.ModelViewSet):
     lookup_field = 'conversation_token'
 
     @detail_route(methods=['get'])
-    def suggested_questions_get(self, request, *args, **kwargs):
+    def suggested_questions_get(self):
         conversation = self.get_object()
         questions = models.Questions.objects.filter(
             question_conversation_level=conversation.conversation_conversation_level)
@@ -51,14 +51,11 @@ class ConversationView(viewsets.ModelViewSet):
             return Response(status=status.HTTP_200_OK)
 
     @detail_route(methods=['post'])
-    def save_response_suggested_questions_post(self, request, *args, **kwargs):
+    def save_response_suggested_questions_post(self, request):
         conversation = self.get_object()
 
         data = JSONParser().parse(request)
         serializer = QuestionRecordsSerializers(data=data)
-
-        conversation_conversation_level = list(models.ConversationLevels.objects.filter(
-            id=conversation.conversation_conversation_level.id + 1))
 
         if serializer.is_valid():
             question = models.Questions.objects.get(
@@ -97,7 +94,7 @@ class ConversationView(viewsets.ModelViewSet):
                             status=status.HTTP_400_BAD_REQUEST)
 
     @detail_route(methods=['get'])
-    def retrieve_response_suggested_questions_post(self, request, *args, **kwargs):
+    def retrieve_response_suggested_questions_post(self):
         conversation = self.get_object()
         questions = models.QuestionRecords.objects.filter(
             question_record_token=conversation.conversation_token)
@@ -105,7 +102,7 @@ class ConversationView(viewsets.ModelViewSet):
         return Response(serializer.data)
 
     @detail_route(methods=['get'])
-    def retrieve_frequency_questions_get(self, request, *args, **kwargs):
+    def retrieve_frequency_questions_get(self):
         nameCategory = None
         conversation = self.get_object()
 
@@ -124,7 +121,7 @@ class ConversationView(viewsets.ModelViewSet):
         return Response(serializer.data)
 
     @detail_route(methods=['get'])
-    def retrieve_article_get(self, request, *args, **kwargs):
+    def retrieve_article_get(self):
         nameCategory = None
         conversation = self.get_object()
 
@@ -143,7 +140,7 @@ class ConversationView(viewsets.ModelViewSet):
         return Response(serializer.data)
 
     @detail_route(methods=['get'])
-    def retrieve_suggestion_questions_get(self, request, *args, **kwargs):
+    def retrieve_suggestion_questions_get(self):
         namePlataform = None
         conversation = self.get_object()
 
