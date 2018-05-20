@@ -113,7 +113,7 @@ class ConversationView(viewsets.ModelViewSet):
             question_record_token=conversation.conversation_token)
 
         for questionRecord in questionRecords:
-            if (questionRecord.question_record_question.question_conversation_level.id == 3):
+            if (questionRecord.question_record_question.question_conversation_level.id == 4):
                 nameCategory = questionRecord.question_record_response
                 break
 
@@ -140,6 +140,25 @@ class ConversationView(viewsets.ModelViewSet):
         questionRecords = list(models.Articles.objects.filter(
             question_category=category))
         serializer = ArticlesSerializers(questionRecords, many=True)
+        return Response(serializer.data)
+
+    @detail_route(methods=['get'])
+    def retrieve_suggestion_questions_get(self, request, *args, **kwargs):
+        namePlataform = None
+        conversation = self.get_object()
+
+        questionRecords = models.QuestionRecords.objects.filter(
+            question_record_token=conversation.conversation_token)
+
+        for questionRecord in questionRecords:
+            if (questionRecord.question_record_question.question_conversation_level.id == 5):
+                namePlataform = questionRecord.question_record_response
+                break
+
+        plataform = models.Platform.objects.filter(category_name=namePlataform)
+        questionRecords = list(models.FrequentQuestion.objects.filter(
+            frequent_questions_Platform=plataform))
+        serializer = FrequentQuestionSerializers(questionRecords, many=True)
         return Response(serializer.data)
 
 
