@@ -19,6 +19,14 @@ retrieve_article = views.ConversationView.as_view({
     'get': 'retrieve_article_get',
 })
 
+retrieve_frequency_questions = views.ConversationView.as_view({
+    'get': 'retrieve_frequency_questions_get',
+})
+
+retrieve_suggestion_questions = views.ConversationView.as_view({
+    'get': 'retrieve_suggestion_questions_get',
+})
+
 router = routers.DefaultRouter()
 router.register(r'type_articles', views.TypeArticleView)
 router.register(r'articles', views.ArticleView)
@@ -43,5 +51,8 @@ urlpatterns = [
     url(r'^retrieve_frequency_questions/(?P<conversation_token>[^/.]+)/$', retrieve_frequency_questions,
         name='retrieve_frequency_questions_get'),
     url(r'^retrieve_article/(?P<conversation_token>[^/.]+)/$', retrieve_article,
-        name='retrieve_article_get')
+        name='retrieve_article_get'),
+    url(r'^retrieve_suggestion_questions/(?P<conversation_token>[^/.]+)/$', retrieve_suggestion_questions,
+        name='retrieve_suggestion_questions_get')
+
 ]
