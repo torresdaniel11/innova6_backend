@@ -126,6 +126,8 @@ class RetrieveRecordsConversationsID(TestCase):
         assert response.status_code == 200
 
 
+
+
 class RetrieveArticlesByTokenConversation(TestCase):
     def setUp(self):
         conversation_level_qualification = ConversationLevels.objects.create(id=3,
