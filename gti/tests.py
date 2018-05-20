@@ -90,7 +90,7 @@ class RetrieveConversationsID(TestCase):
 
 class RetrieveRecordsConversationsID(TestCase):
     def setUp(self):
-        conversation_level_qualification = ConversationLevels.objects.create(id=3,
+        conversation_level_qualification = ConversationLevels.objects.create(id=4,
                                                                              conversation_level_name="Seleccionar categoria",
                                                                              conversation_color="BLUE")
 
