@@ -152,7 +152,7 @@ class ConversationView(viewsets.ModelViewSet):
                 namePlataform = questionRecord.question_record_response
                 break
 
-        plataform = models.Platform.objects.filter(category_name=namePlataform)
+        plataform = models.Platform.objects.filter(platform_name=namePlataform)
         questionRecords = list(models.FrequentQuestion.objects.filter(
             frequent_questions_Platform=plataform))
         serializer = FrequentQuestionSerializers(questionRecords, many=True)
