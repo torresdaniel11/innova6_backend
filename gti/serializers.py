@@ -127,6 +127,19 @@ class ArticlesSerializers(serializers.ModelSerializer):
                                        article_type_article=article_type_article,
                                        question_category=question_category)
 
+    def update(self, instance, validated_data):
+        article_type_article = TypeArticle.objects.get(
+            type_article_name=validated_data['article_type_article']['type_article_name'])
+        question_category = Category.objects.get(
+            category_name=validated_data['question_category']['category_name'])
+        instance.article_tittle = validated_data['article_tittle']
+        instance.article_content = validated_data['article_content']
+        instance.article_slug = "n/A"
+        instance.article_url = validated_data['article_url']
+        instance.article_type_article = article_type_article
+        instance.question_category = question_category
+        instance.save()
+        return instance
 
 class ConfigSerializers(serializers.HyperlinkedModelSerializer):
     class Meta:
